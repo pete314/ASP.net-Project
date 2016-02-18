@@ -117,12 +117,12 @@ Usage: Core sytling for all pages
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e44c65;
+		color: #00b3b3;
 		text-decoration: none;
 	}
 
 		a:hover {
-			color: #e44c65 !important;
+			color: #00cccc !important;
 			border-bottom-color: transparent;
 		}
 
@@ -610,6 +610,26 @@ Usage: Core sytling for all pages
 					ul.icons li .icon:before {
 						font-size: 2em;
 					}
+        ul.vertical-footer {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.vertical-footer li {
+				display: block;
+				height: 2.5em;
+				line-height: 2.5em;
+				padding: 0 0.7em;
+			}
+
+				ul.vertical-footer li .icon {
+					font-size: 0.8em;
+				}
+
+					ul.vertical-footer li .icon:before {
+						font-size: 2em;
+					}
 
 		ul.actions {
 			cursor: default;
@@ -1060,6 +1080,10 @@ Usage: Core sytling for all pages
 		box-shadow: none;
 		position: absolute;
 	}
+    
+    .sub .subsub{
+        display: none;
+    }
 
 /* Banner */
 
@@ -1195,6 +1219,11 @@ Usage: Core sytling for all pages
 				#footer .copyright li a {
 					color: inherit;
 				}
+     #footer h2 + p {
+		font-size: 1.25em;
+		margin-top: -1em;
+		line-height: 1.75em;
+	}
 /* Alignments */
 
 .float-right{
@@ -1210,4 +1239,8 @@ Usage: Core sytling for all pages
 }
 .width-80{
     width: 80%;
+}
+
+.width-33{
+    width: 30%;
 }
