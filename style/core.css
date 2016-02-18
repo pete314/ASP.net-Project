@@ -61,33 +61,6 @@ Usage: Core sytling for all pages
 		margin-left: auto;
 		margin-right: auto;
 	}
-
-	
-	@media screen and (max-width: 1680px) {
-
-		.container.\31 25\25 {
-			width: 100%;
-			max-width: 87.5em;
-			min-width: 70em;
-		}
-
-		.container.\37 5\25 {
-			width: 52.5em;
-		}
-
-		.container.\35 0\25 {
-			width: 35em;
-		}
-
-		.container.\32 5\25 {
-			width: 17.5em;
-		}
-
-		.container {
-			width: 70em;
-		}
-
-	}
 	
 /* Grid */
 
@@ -307,7 +280,7 @@ Usage: Core sytling for all pages
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: #00cccc;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -814,8 +787,8 @@ Usage: Core sytling for all pages
 		input[type="button"]:active,
 		.button:hover,
 		.button:active {
-			box-shadow: inset 0 0 0 1px #e44c65;
-			color: #e44c65 !important;
+			box-shadow: inset 0 0 0 1px #00cccc;
+			color: #00cccc !important;
 		}
 
 		input[type="submit"]:active,
@@ -859,7 +832,7 @@ Usage: Core sytling for all pages
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #e44c65;
+			background-color: #00cccc;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -868,14 +841,14 @@ Usage: Core sytling for all pages
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			.button.special:hover {
-				background-color: #e76278;
+				background-color: #00e6e6;
 			}
 
 			input[type="submit"].special:active,
 			input[type="reset"].special:active,
 			input[type="button"].special:active,
 			.button.special:active {
-				background-color: #e13652;
+				background-color: #00b3b3;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -1222,3 +1195,19 @@ Usage: Core sytling for all pages
 				#footer .copyright li a {
 					color: inherit;
 				}
+/* Alignments */
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+
+.width-20{
+    width: 20%;
+}
+.width-80{
+    width: 80%;
+}
