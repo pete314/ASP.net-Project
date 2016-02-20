@@ -331,6 +331,7 @@ Usage: Core sytling for all pages
         margin-top: 0.2em;
 		text-decoration: none;
 		width: 100%;
+        color: black;
 	}
 
 		input[type="text"]:invalid,
@@ -704,6 +705,15 @@ Usage: Core sytling for all pages
 	dl {
 		margin: 0 0 2em 0;
 	}
+
+/* Content */
+    #content h2 {
+        font-size: 0.9em;
+		margin-top: 1em;
+		line-height: 1em;
+        text-align: left;
+        color: #1c1d26;   
+    }
 
 /* Table */
 

@@ -55,28 +55,50 @@
     
     <!-- CONTENT WRAPPER FROM HERE-->
     <div id="content" class="top-offset-content-panel">
-        <div id="content-sidebar" class="float-left width-20" style="height: 550px; background-color: blue;">
+        <div id="content-sidebar" class="float-left width-20" style="height: 550px; background-color: white;">
             <h2>Side Filter</h2>
             <ul class="vertical-footer">
-                 <form>
-                       <input type="checkbox" value="None" id="samsung" name="samsung" />
-	                   <label for="samsung"></label><br/>
-                       <input type="checkbox" value="None" id="apple" name="apple" />
-	                   <label for="Apple"></label><br/>
-                       <input type="checkbox" value="None" id="huawei" name="huawei" />
-	                   <label for="Huawei"></label><br/>
-                       <hr/>
-                       <input type="checkbox" value="None" id="samsung" name="samsung" />
-	                   <label for="samsung"></label><br/>
-                       <input type="checkbox" value="None" id="apple" name="apple" />
-	                   <label for="Apple"></label><br/>
-                       <input type="checkbox" value="None" id="huawei" name="huawei" />
-	                   <label for="Huawei"></label><br/>
-                       <hr/>
-                 </form>
+                <form method="post" action="#">
+                        <div class="select-wrapper">
+                            <select name="brand" id="brand">
+                                <option value="">- Brand -</option>
+                                <option value="1">Samsung</option>
+                                <option value="1">Apple</option>
+                                <option value="1">LG</option>
+                                <option value="1">Nexus</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select name="os" id="os">
+                                <option value="">- Operating system -</option>
+                                <option value="1">Windows</option>
+                                <option value="1">IOS</option>
+                                <option value="1">Android</option>
+                                <option value="1">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="radio" id="price-200" name="price-filter" checked>
+                            <label for="price-200" style="color: black">< 200EUR</label>
+                        </div>
+                        <div style="color: black">
+                            <input type="radio" id="price-300" name="price-filter">
+                            <label for="price-300" style="color: black">200EUR <> 500 EUR</label>
+                        </div>
+                        <div style="color: black">
+                            <input type="radio" id="price-500" name="price-filter">
+                            <label for="price-500" style="color: black"> 500Eur < </label>
+                        </div>
+
+                        <div class="">
+                            <ul class="actions">
+                                <li><input type="submit" value="Filter" class="special" /></li>
+                            </ul>
+                        </div>
+                </form>
             </ul>
         </div>
-         <div id="content-main" class="float-left width-80" style="height: 550px; background-color: green;"></div>
+         <div id="content-main" class="float-left width-80" style="height: 550px; background-color: white;"></div>
     </div>
         <!-- CONTENT SIDEBAR (LEFT) FROM HERE-->
         <!-- END CONTENT SIDEBAR (LEFT) MENU-->
@@ -119,8 +141,7 @@
             </div>
             <div class="float-left">
                 <h2>Contact Us</h2>
-                <form>
-                    <form method="post" action="#">
+                <form method="post" action="#">
                         <input type="text" name="name" id="name" value="" placeholder="Name" />
                         <input type="email" name="email" id="email" value="" placeholder="Email" />
                         <div class="select-wrapper">
@@ -138,7 +159,6 @@
                         <div class="">
                             <ul class="actions">
                                 <li><input type="submit" value="Send Message" class="special" /></li>
-                                <li><input type="reset" value="Reset" /></li>
                             </ul>
                         </div>
                 </form>
