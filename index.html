@@ -19,18 +19,31 @@
     <!-- HEADER MENU FROM HERE-->
     <header id="header">
         <h1 id="logo"><a href="index.html">Sergio's store</a></h1>
-        <nav id="nav">
-            <ul class="top">
+        <nav class="nav-wrapper">
+            <ul class="nav">
                 <li><a href="index.html">Home</a></li>
-                <li class="sub">
-                    <a href="#">Store items</a>
-                    <ul class="subsub">
-                        <li><a href="#">Store</a></li>
-                        <li><a href="#">Right Sidebar</a></li>
-                        <li><a href="#">No Sidebar</a></li>
+                <li><a href="#">Brands</a>
+                    <ul >
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">LG</a></li>
                     </ul>
                 </li>
-                <li><a href="#" class="button special">Login</a></li>
+                <li><a href="#">Categories</a>
+                    <ul class="subsub">
+                        <li><a href="#">Phones</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Operating systems</a>
+                    <ul class="subsub">
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">IOS</a></li>
+                        <li><a href="#">Windows</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a></li>
             </ul>
         </nav>
         <!-- HEADER SUB-MENU FROM HERE-->
@@ -41,7 +54,7 @@
     
     
     <!-- CONTENT WRAPPER FROM HERE-->
-    <div id="content" >
+    <div id="content" class="top-offset-content-panel">
         <div id="content-sidebar" class="float-left width-20" style="height: 550px; background-color: blue;">
             <h2>Side Filter</h2>
             <ul class="vertical-footer">
@@ -76,33 +89,59 @@
         
     <!-- END FOOTER WRAPPER-->
     <footer id="footer">
-        <div class="wrapper">
-            <div class="width-33 float-left">
+        <div class="wrapper footer-menu-block">
+            <div class="width-20 float-left">
                 <h2>Members</h2>
                 <ul class="vertical-footer">
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Login</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Cart</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Settings</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Orders</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-sign-in"></i><span class="label">Login</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-shopping-basket"></i><span class="label">Cart</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-history"></i><span class="label">History</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-gear"></i><span class="label">Settings</span></a></li>
                 </ul>
             </div>
-            <div class="width-33 float-left">
-                <h2>Members</h2>
+            <div class="width-20 float-left">
+                <h2>Operating systems</h2>
                 <ul class="vertical-footer">
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Login</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Cart</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Settings</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Orders</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-android"></i><span class="label">Android</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-windows"></i><span class="label">Windows</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-apple"></i><span class="label">Apple</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-info"></i><span class="label">Other</span></a></li>
                 </ul>
             </div>
-            <div class="width-33 float-left">
-                <h2>Members</h2>
+            <div class="width-20 float-left">
+                <h2>Brands</h2>
                 <ul class="vertical-footer">
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Login</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Cart</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Settings</span></a></li>
-                    <li><a href="#" class="icon alt fa fa-sign-in"><span class="label">Orders</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Samsung</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Nexus</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Apple</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">LG</span></a></li>
                 </ul>
+            </div>
+            <div class="float-left">
+                <h2>Contact Us</h2>
+                <form>
+                    <form method="post" action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Name" />
+                        <input type="email" name="email" id="email" value="" placeholder="Email" />
+                        <div class="select-wrapper">
+                            <select name="category" id="category">
+                                <option value="">- Category -</option>
+                                <option value="1">Manufacturing</option>
+                                <option value="1">Shipping</option>
+                                <option value="1">Administration</option>
+                                <option value="1">Human Resources</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
+                        </div>
+                        <div class="">
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="special" /></li>
+                                <li><input type="reset" value="Reset" /></li>
+                            </ul>
+                        </div>
+                </form>
             </div>
         </div>
         

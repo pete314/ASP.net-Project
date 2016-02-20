@@ -89,7 +89,8 @@ Usage: Core sytling for all pages
 /* Basic */
 
 	html, body {
-		background: #1c1d26;
+		background: #fff;
+        color: #272833;
 	}
 
 	body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -133,6 +134,7 @@ Usage: Core sytling for all pages
 
 	em, i {
 		font-style: italic;
+        margin-right: 1em;
 	}
 
 	p {
@@ -299,7 +301,7 @@ Usage: Core sytling for all pages
 	}
 
 	label {
-		color: #ffffff;
+		color:  rgba(0, 0, 0, 0.5);
 		display: block;
 		font-size: 0.9em;
 		font-weight: 300;
@@ -321,11 +323,12 @@ Usage: Core sytling for all pages
 		transition: border-color 0.2s ease-in-out;
 		background: transparent;
 		border-radius: 4px;
-		border: solid 1px rgba(255, 255, 255, 0.3);
+		border: solid 1px rgba(0, 255, 255, 0.3);
 		color: inherit;
 		display: block;
 		outline: 0;
-		padding: 0 1em;
+		padding: 0 0.5em;
+        margin-top: 0.2em;
 		text-decoration: none;
 		width: 100%;
 	}
@@ -362,11 +365,11 @@ Usage: Core sytling for all pages
 		}
 
 		.select-wrapper:before {
-			color: rgba(255, 255, 255, 0.3);
+			color:  rgba(0, 0, 0, 0.5);
 			content: '\f078';
 			display: block;
-			height: 3em;
-			line-height: 3em;
+			height: 1em;
+			line-height: 1.2em;
 			pointer-events: none;
 			position: absolute;
 			right: 0;
@@ -383,7 +386,7 @@ Usage: Core sytling for all pages
 	input[type="password"],
 	input[type="email"],
 	select {
-		height: 3em;
+		height: 1.2em;
 	}
 
 	textarea {
@@ -453,8 +456,8 @@ Usage: Core sytling for all pages
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: rgba(255, 255, 255, 0.25);
-			color: #ffffff;
+			background: rgba(0, 255, 255, 0.25);
+			color: rgba(0, 100, 255, 0.25);
 			content: '\f00c';
 		}
 
@@ -472,27 +475,27 @@ Usage: Core sytling for all pages
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(0, 0, 0, 0.5) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color:  rgba(0, 0, 0, 0.5) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(0, 0, 0, 0.5) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color:  rgba(0, 0, 0, 0.5) !important;
 		opacity: 1.0;
 	}
 
 	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgba(0, 0, 0, 0.5) !important;
 		opacity: 1.0;
 	}
 
@@ -598,8 +601,8 @@ Usage: Core sytling for all pages
 
 			ul.icons li {
 				display: inline-block;
-				height: 2.5em;
-				line-height: 2.5em;
+				height: 1em;
+				line-height: 1.2em;
 				padding: 0 0.5em;
 			}
 
@@ -620,7 +623,7 @@ Usage: Core sytling for all pages
 				display: block;
 				height: 2.5em;
 				line-height: 2.5em;
-				padding: 0 0.7em;
+				padding: 0 0em;
 			}
 
 				ul.vertical-footer li .icon {
@@ -628,7 +631,7 @@ Usage: Core sytling for all pages
 				}
 
 					ul.vertical-footer li .icon:before {
-						font-size: 2em;
+						font-size: 1em;
 					}
 
 		ul.actions {
@@ -792,12 +795,13 @@ Usage: Core sytling for all pages
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 300;
-		height: 3em;
-		line-height: 3em;
+		height: 1.2em;
+		line-height: 1em;
 		padding: 0 2.25em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+        margin-top: 0.5em;
 	}
 
 		input[type="submit"]:hover, input[type="submit"]:active,
@@ -845,7 +849,7 @@ Usage: Core sytling for all pages
 		input[type="reset"].big,
 		input[type="button"].big,
 		.button.big {
-			font-size: 1.35em;
+			font-size: 1em;
 		}
 
 		input[type="submit"].special,
@@ -854,7 +858,7 @@ Usage: Core sytling for all pages
 		.button.special {
 			background-color: #00cccc;
 			box-shadow: none;
-			color: #ffffff !important;
+			color: #272833 !important;
 		}
 
 			input[type="submit"].special:hover,
@@ -1084,6 +1088,15 @@ Usage: Core sytling for all pages
     .sub .subsub{
         display: none;
     }
+    
+    .nav {margin:0; padding:0; list-style:none;}
+    .nav a {text-decoration:none;}
+    .nav li ul {list-style:none;}
+
+    .nav  li {float:left;padding:10px;position:relative;}
+    .nav li div {display:none;position:absolute; left:-39px; width:470px;}
+    .nav li:hover > div {display:block;}
+    .nav .nav-column {float:left;}
 
 /* Banner */
 
@@ -1170,9 +1183,10 @@ Usage: Core sytling for all pages
 /* Footer */
 
 	#footer {
-		background: #272833;
+		background: #ffd;
 		padding: 6em 0;
 		text-align: center;
+        color: #272833;
 	}
 
 		#footer .icons .icon.alt {
@@ -1194,12 +1208,13 @@ Usage: Core sytling for all pages
 			}
 
 		#footer .copyright {
-			color: rgba(255, 255, 255, 0.5);
+			color: #272833;
 			font-size: 0.8em;
 			line-height: 1em;
 			margin: 2em 0 0 0;
 			padding: 0;
 			text-align: center;
+            width: 80%;
 		}
 
 			#footer .copyright li {
@@ -1224,6 +1239,22 @@ Usage: Core sytling for all pages
 		margin-top: -1em;
 		line-height: 1.75em;
 	}
+    
+    .footer-menu-block{
+        font-size: 0.9em;
+		margin-top: 1em;
+		line-height: 1em;
+        text-align: left;
+        margin: 0 10%;        
+    }
+    
+    .footer-menu-block h2 {
+        font-size: 0.9em;
+		margin-top: 1em;
+		line-height: 1em;
+        text-align: left;
+        color: #1c1d26;     
+    }
 /* Alignments */
 
 .float-right{
@@ -1243,4 +1274,8 @@ Usage: Core sytling for all pages
 
 .width-33{
     width: 30%;
+}
+
+.top-offset-content-panel{
+    margin-top: 3.5em;
 }
