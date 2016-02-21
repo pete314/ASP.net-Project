@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Team sergio - login page</title>
+  <meta name="description" content="This should be dynamic description from ASP">
+  <meta name="author" content="Team Sergio - GMIT">
+
+  <link rel="stylesheet" href="style/core.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <!-- HEADER MENU FROM HERE-->
+    <header id="header">
+        <h1 id="logo"><a href="index.html">Sergio's store</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Brands</a>
+                    <ul>
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">LG</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="#">Phones</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Operating systems</a>
+                    <ul>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">IOS</a></li>
+                        <li><a href="#">Windows</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a></li>
+            </ul>
+        </nav>
+        <!-- HEADER SUB-MENU FROM HERE-->
+        <!-- END HEADER SUB-MENU-->
+    </header>
+    <!-- END HEADER MENU-->
+    
+    <!-- Breadcrumb start-->
+    <div id="bradcrumb" class="top-offset-breadcrumb" style="color: black; margin-left: 10px; padding-top: 10px; padding-left: 10px;">
+        <a href="index.html"><i class="fa fa-home"></i>Home</a>
+        >>
+        <a href="#">Login</a>
+    </div>
+    <!-- breadcrumb end-->
+    
+    <!-- CONTENT WRAPPER FROM HERE-->
+    <div id="content" class="top-offset-content-panel">
+        <div id="login-wrapper">
+            <div id="login-panel">
+                <center> Login to Sergio's<br>Store</center>
+                <form>
+                    <div style="padding: 0.5em;">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i> Email</span>
+                        <input class="form-control" type="email" placeholder="Email address">
+                    </div>
+                    <div style="padding: 0.5em;">
+                        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i> Password</span>
+                        <input class="form-control" type="password" placeholder="your_p@ss0rd">
+                    </div>
+                    <div style="padding: 0.5em;">
+                        <input type="submit" value="Login" class="button special" style="color: black; float: rigth">
+                    </div>
+                </form>
+                Need help with login?<br>
+                <a href="#">Forgotten password</a> | 
+                <a href="#">Register</a>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT WRAPPER MENU-->
+    <!-- FOOTER WRAPPER FROM HERE-->
+    <footer id="footer">
+        <div class="wrapper footer-menu-block">
+            <div class="width-20 float-left">
+                <h2>Members</h2>
+                <ul class="vertical-footer">
+                    <li><a href="#"><i class="icon fa fa-sign-in"></i><span class="label">Login</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-shopping-basket"></i><span class="label">Cart</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-history"></i><span class="label">History</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-gear"></i><span class="label">Settings</span></a></li>
+                </ul>
+            </div>
+            <div class="width-20 float-left">
+                <h2>Operating systems</h2>
+                <ul class="vertical-footer">
+                    <li><a href="#"><i class="icon fa fa-android"></i><span class="label">Android</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-windows"></i><span class="label">Windows</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-apple"></i><span class="label">Apple</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-info"></i><span class="label">Other</span></a></li>
+                </ul>
+            </div>
+            <div class="width-20 float-left">
+                <h2>Brands</h2>
+                <ul class="vertical-footer">
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Samsung</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Nexus</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Apple</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">LG</span></a></li>
+                </ul>
+            </div>
+            <div class="float-left">
+                <h2>Contact Us</h2>
+                <form method="post" action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Name" />
+                        <input type="email" name="email" id="email" value="" placeholder="Email" />
+                        <div class="select-wrapper">
+                            <select name="category" id="category">
+                                <option value="">- Category -</option>
+                                <option value="1">Manufacturing</option>
+                                <option value="1">Shipping</option>
+                                <option value="1">Administration</option>
+                                <option value="1">Human Resources</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
+                        </div>
+                        <div class="">
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="special" /></li>
+                            </ul>
+                        </div>
+                </form>
+            </div>
+        </div>
+        <!-- FOOTER COPYRIGHT FROM HERE-->
+        <ul class="copyright">
+            <li>&copy; Team Sergio. All rights reserved.</li>
+        </ul>
+        <!-- END FOOTER COPYRIGHT-->
+    </footer>
+    <!-- END FOOTER WRAPPER-->
+    <!-- SCRIPTS FROM HERE-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/core.js"></script>
+</body>
+</html>
