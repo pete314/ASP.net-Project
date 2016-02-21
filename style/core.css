@@ -109,7 +109,7 @@ Usage: Core sytling for all pages
 		font-family: "Roboto", Helvetica, sans-serif;
 		font-size: 15pt;
 		font-weight: 100;
-		line-height: 1.75em;
+		line-height: 1em;
 	}
 
 	a {
@@ -387,7 +387,7 @@ Usage: Core sytling for all pages
 	input[type="password"],
 	input[type="email"],
 	select {
-		height: 1.2em;
+		height: 1.5em;
 	}
 
 	textarea {
@@ -706,14 +706,54 @@ Usage: Core sytling for all pages
 		margin: 0 0 2em 0;
 	}
 
+/* Breadcrumb */
+    #breadcrumb{
+        padding-left: 10px;
+        text-align: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 0.9em;
+        font-size: 0.8em;
+        color: black;
+    }
 /* Content */
     #content h2 {
-        font-size: 0.9em;
-		margin-top: 1em;
-		line-height: 1em;
+        font-size: 1.8em;
+		line-height: 2em;
         text-align: left;
-        color: #1c1d26;   
+        color: #1c1d26;
+        font-weight: bold;   
     }
+    
+    #content-sidebar{
+        padding-left: 10px;
+    }
+    
+    .side-radio {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    
+    .item-wrapper{
+        float: left;
+        border-bottom: 1px dashed #00b3b3;
+        padding: 1em;
+    }
+    
+    .item-wrapper img{
+        height: 120px;
+        float: left;
+    }
+    
+    .item-details-wrapper .item-details-desc{
+        max-height: 120px;
+        text-align: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.1em;
+        font-size: 0.8em;
+        color: black;
+        
+    }
+    
 
 /* Table */
 
@@ -1052,7 +1092,6 @@ Usage: Core sytling for all pages
 			#header nav ul {
 				margin: 0;
 			}
-
 				#header nav ul li {
 					display: inline-block;
 					margin-left: 1em;
@@ -1084,7 +1123,7 @@ Usage: Core sytling for all pages
 					#header nav ul li > ul {
 						display: none;
 					}
-
+                    
 	body.landing #page-wrapper {
 		padding-top: 0;
 	}
@@ -1098,15 +1137,6 @@ Usage: Core sytling for all pages
     .sub .subsub{
         display: none;
     }
-    
-    .nav {margin:0; padding:0; list-style:none;}
-    .nav a {text-decoration:none;}
-    .nav li ul {list-style:none;}
-
-    .nav  li {float:left;padding:10px;position:relative;}
-    .nav li div {display:none;position:absolute; left:-39px; width:470px;}
-    .nav li:hover > div {display:block;}
-    .nav .nav-column {float:left;}
 
 /* Banner */
 
@@ -1193,7 +1223,7 @@ Usage: Core sytling for all pages
 /* Footer */
 
 	#footer {
-		background: #ffd;
+		background: #fff;
 		padding: 6em 0;
 		text-align: center;
         color: #272833;
@@ -1286,6 +1316,9 @@ Usage: Core sytling for all pages
     width: 30%;
 }
 
-.top-offset-content-panel{
+.top-offset-breadcrumb{
     margin-top: 3.5em;
+}
+.top-offset-content-panel{
+    margin-top: 0.5em;
 }
