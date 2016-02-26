@@ -5,16 +5,197 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="assets/style/core.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
+     <!-- HEADER MENU FROM HERE-->
+    <header id="header">
+        <h1 id="logo"><a href="index.html">Sergio's store</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Brands</a>
+                    <ul>
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">LG</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="#">Phones</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Operating systems</a>
+                    <ul>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">IOS</a></li>
+                        <li><a href="#">Windows</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a></li>
+            </ul>
+        </nav>
+        <!-- HEADER SUB-MENU FROM HERE-->
+        <!-- END HEADER SUB-MENU-->
+    </header>
+    <!-- END HEADER MENU-->
+    <!-- Breadcrumb start-->
+    <div id="bradcrumb" class="top-offset-breadcrumb" style="color: black; margin-left: 10px; padding-top: 10px; padding-left: 10px;">
+        <a href="index.html"><i class="fa fa-home"></i>Home</a>
+        >>
+        <a href="#">Some Page</a>
     </div>
-    </form>
+    <!-- breadcrumb end-->
+    
+    <!-- CONTENT WRAPPER FROM HERE-->
+    <div id="content" class="top-offset-content-panel">
+        <!-- CONTENT SIDEBAR (LEFT) FROM HERE-->
+        <div id="content-sidebar" class="float-left width-20" style="height: 550px; background-color: white;">
+            <h2>Side Filter</h2>
+            <ul class="vertical-footer">
+                <form method="post" action="#">
+                        <div class="select-wrapper">
+                            <select name="brand" id="brand">
+                                <option value="">- Brand -</option>
+                                <option value="1">Samsung</option>
+                                <option value="1">Apple</option>
+                                <option value="1">LG</option>
+                                <option value="1">Nexus</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select name="os" id="os">
+                                <option value="">- Operating system -</option>
+                                <option value="1">Windows</option>
+                                <option value="1">IOS</option>
+                                <option value="1">Android</option>
+                                <option value="1">Other</option>
+                            </select>
+                        </div>
+                        <div class="side-radio">
+                            <input type="radio" id="price-200" name="price-filter" checked>
+                            <label for="price-200" style="color: black">< 200EUR</label>
+                        </div>
+                        <div class="side-radio">
+                            <input type="radio" id="price-300" name="price-filter">
+                            <label for="price-300" style="color: black">200EUR <> 500 EUR</label>
+                        </div>
+                        <div class="side-radio">
+                            <input type="radio" id="price-500" name="price-filter">
+                            <label for="price-500" style="color: black"> 500Eur < </label>
+                        </div>
+
+                        <div class="">
+                            <ul class="actions">
+                                <li><input type="submit" value="Filter" class="special" /></li>
+                            </ul>
+                        </div>
+                </form>
+            </ul>
+        </div>
+        <!-- END CONTENT SIDEBAR (LEFT) MENU-->
+        <!-- CONTENT SIDEBAR FROM HERE-->
+        <div id="content-main" class="float-left width-80" style="background-color: white;">
+            <h2>Most popular items</h2>
+            <section class="item-wrapper">
+                <img src="assets/img/s3-sample-pic.jpg"/>
+                <div class="item-details-wrapper">
+                    <a href="#"> Samsung Galaxy S3</a><br><br>
+                    <u><strong style="color:black;">Description:</strong></u><br>
+                    <p class="item-details-desc">
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat tincidunt congue. Sed posuere ex arcu, vitae egestas tellus sollicitudin ac. Duis bibendum felis libero, id egestas erat aliquam ut. Fusce vel felis mollis ipsum faucibus fringilla vel vitae urna. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse quis elementum purus. 
+                       <br><br>
+                       <strong style="color:black; height: 2em; line-height: 2em;">Tags:</strong>
+                            <a href="#" alt="Android OS"><i class="fa fa-android"></i> Android</a>
+                            <a href="#" alt="Android OS" class="button-special">Samsung</a>
+                            <a href="#" alt="Android OS" class="button-special">Phone</a>
+                        <strong style="color:black;  height: 2em; line-height: 2em;"> | Price: 500Eur</strong>
+                        <a href="#" class="button special" style="text-align: right; float: right; height: 2em; line-height: 2em; padding: 0 1.25em; background-color: green;"><i class="fa fa-plus-square-o fa-lg"></i>Buy</a>
+                    </p>
+                </div>
+            </section>
+            <!-- ASP WRAPPER STARTS HERE -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+            </asp:ContentPlaceHolder>
+            <!-- ASP WRAPPER ENDS HERE -->
+        </div>
+        <!-- END CONTENT SIDEBAR MENU-->
+    </div>
+    <!-- END CONTENT WRAPPER MENU-->
+    <!-- FOOTER WRAPPER FROM HERE-->
+    <footer id="footer">
+        <div class="wrapper footer-menu-block">
+            <div class="width-20 float-left">
+                <h2>Members</h2>
+                <ul class="vertical-footer">
+                    <li><a href="#"><i class="icon fa fa-sign-in"></i><span class="label">Login</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-shopping-basket"></i><span class="label">Cart</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-history"></i><span class="label">History</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-gear"></i><span class="label">Settings</span></a></li>
+                </ul>
+            </div>
+            <div class="width-20 float-left">
+                <h2>Operating systems</h2>
+                <ul class="vertical-footer">
+                    <li><a href="#"><i class="icon fa fa-android"></i><span class="label">Android</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-windows"></i><span class="label">Windows</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-apple"></i><span class="label">Apple</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-info"></i><span class="label">Other</span></a></li>
+                </ul>
+            </div>
+            <div class="width-20 float-left">
+                <h2>Brands</h2>
+                <ul class="vertical-footer">
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Samsung</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Nexus</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Apple</span></a></li>
+                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">LG</span></a></li>
+                </ul>
+            </div>
+            <div class="float-left">
+                <h2>Contact Us</h2>
+                <form method="post" action="#">
+                        <input type="text" name="name" id="name" value="" placeholder="Name" />
+                        <input type="email" name="email" id="email" value="" placeholder="Email" />
+                        <div class="select-wrapper">
+                            <select name="category" id="category">
+                                <option value="">- Category -</option>
+                                <option value="1">Manufacturing</option>
+                                <option value="1">Shipping</option>
+                                <option value="1">Administration</option>
+                                <option value="1">Human Resources</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
+                        </div>
+                        <div class="">
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="special" /></li>
+                            </ul>
+                        </div>
+                </form>
+            </div>
+        </div>
+        <!-- FOOTER COPYRIGHT FROM HERE-->
+        <ul class="copyright">
+            <li>&copy; Team Sergio. All rights reserved.</li>
+        </ul>
+        <!-- END FOOTER COPYRIGHT-->
+    </footer>
+    <!-- END FOOTER WRAPPER-->
+    <!-- SCRIPTS FROM HERE-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="ssets/js/core.js"></script>
 </body>
 </html>
