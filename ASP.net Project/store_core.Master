@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="store_core.master.cs" Inherits="ASP.net_Project.store_core" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="store_core.master.cs" Inherits="ASP.net_Project.store_core" %>
 
 <!DOCTYPE html>
 
@@ -58,71 +58,8 @@
     
     <!-- CONTENT WRAPPER FROM HERE-->
     <div id="content" class="top-offset-content-panel">
-        <!-- CONTENT SIDEBAR (LEFT) FROM HERE-->
-        <div id="content-sidebar" class="float-left width-20" style="height: 550px; background-color: white;">
-            <h2>Side Filter</h2>
-            <ul class="vertical-footer">
-                <form method="post" action="#">
-                        <div class="select-wrapper">
-                            <select name="brand" id="brand">
-                                <option value="">- Brand -</option>
-                                <option value="1">Samsung</option>
-                                <option value="1">Apple</option>
-                                <option value="1">LG</option>
-                                <option value="1">Nexus</option>
-                            </select>
-                        </div>
-                        <div class="select-wrapper">
-                            <select name="os" id="os">
-                                <option value="">- Operating system -</option>
-                                <option value="1">Windows</option>
-                                <option value="1">IOS</option>
-                                <option value="1">Android</option>
-                                <option value="1">Other</option>
-                            </select>
-                        </div>
-                        <div class="side-radio">
-                            <input type="radio" id="price-200" name="price-filter" checked>
-                            <label for="price-200" style="color: black">< 200EUR</label>
-                        </div>
-                        <div class="side-radio">
-                            <input type="radio" id="price-300" name="price-filter">
-                            <label for="price-300" style="color: black">200EUR <> 500 EUR</label>
-                        </div>
-                        <div class="side-radio">
-                            <input type="radio" id="price-500" name="price-filter">
-                            <label for="price-500" style="color: black"> 500Eur < </label>
-                        </div>
-
-                        <div class="">
-                            <ul class="actions">
-                                <li><input type="submit" value="Filter" class="special" /></li>
-                            </ul>
-                        </div>
-                </form>
-            </ul>
-        </div>
-        <!-- END CONTENT SIDEBAR (LEFT) MENU-->
         <!-- CONTENT SIDEBAR FROM HERE-->
-        <div id="content-main" class="float-left width-80" style="background-color: white;">
-            <h2>Most popular items</h2>
-            <section class="item-wrapper">
-                <img src="assets/img/s3-sample-pic.jpg"/>
-                <div class="item-details-wrapper">
-                    <a href="#"> Samsung Galaxy S3</a><br><br>
-                    <u><strong style="color:black;">Description:</strong></u><br>
-                    <p class="item-details-desc">
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat tincidunt congue. Sed posuere ex arcu, vitae egestas tellus sollicitudin ac. Duis bibendum felis libero, id egestas erat aliquam ut. Fusce vel felis mollis ipsum faucibus fringilla vel vitae urna. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse quis elementum purus. 
-                       <br><br>
-                       <strong style="color:black; height: 2em; line-height: 2em;">Tags:</strong>
-                            <a href="#" alt="Android OS"><i class="fa fa-android"></i> Android</a>
-                            <a href="#" alt="Android OS" class="button-special">Samsung</a>
-                            <a href="#" alt="Android OS" class="button-special">Phone</a>
-                        <strong style="color:black;  height: 2em; line-height: 2em;"> | Price: 500Eur</strong>
-                        <a href="#" class="button special" style="text-align: right; float: right; height: 2em; line-height: 2em; padding: 0 1.25em; background-color: green;"><i class="fa fa-plus-square-o fa-lg"></i>Buy</a>
-                    </p>
-                </div>
-            </section>
+        <div id="content-main" class="center-all width-80" style="background-color: white;">
             <!-- ASP WRAPPER STARTS HERE -->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
         
