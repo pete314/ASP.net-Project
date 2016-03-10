@@ -1,4 +1,4 @@
-﻿@import url("font-awesome.min.css");
+@import url("font-awesome.min.css");
 @import url("http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
 /**
@@ -128,7 +128,7 @@ Author: Peter Nagy
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: black;
 		font-weight: 300;
 	}
 
@@ -142,7 +142,7 @@ Author: Peter Nagy
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: black;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -250,7 +250,7 @@ Author: Peter Nagy
 	}
 
 	header p {
-		color: #ffffff;
+		color: black;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -396,7 +396,7 @@ Author: Peter Nagy
 
 	select option {
 		background-color: #1c1d26;
-		color: #ffffff;
+		color: black;
 	}
 
 	select:focus::-ms-value {
@@ -782,7 +782,7 @@ Author: Peter Nagy
 		}
 
 		table th {
-			color: #ffffff;
+			color: black;
 			font-size: 0.9em;
 			font-weight: 300;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -934,7 +934,7 @@ Author: Peter Nagy
 		.button:disabled {
 			background-color: rgba(255, 255, 255, 0.3) !important;
 			box-shadow: none !important;
-			color: #ffffff !important;
+			color: black !important;
 			cursor: default;
 			opacity: 0.25;
 		}
@@ -966,7 +966,7 @@ Author: Peter Nagy
 			.wrapper.style2 .button:active {
 				background-color: rgba(255, 255, 255, 0.075) !important;
 				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
-				color: #ffffff !important;
+				color: black !important;
 			}
 
 			.wrapper.style2 input[type="submit"]:active,
@@ -980,7 +980,7 @@ Author: Peter Nagy
 			.wrapper.style2 input[type="reset"].special,
 			.wrapper.style2 input[type="button"].special,
 			.wrapper.style2 .button.special {
-				background-color: #ffffff;
+				background-color: black;
 				color: #e44c65 !important;
 			}
 
@@ -993,7 +993,7 @@ Author: Peter Nagy
 				.wrapper.style2 .button.special:active {
 					background-color: rgba(255, 255, 255, 0.075) !important;
 					box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
-					color: #ffffff !important;
+					color: black !important;
 				}
 
 				.wrapper.style2 input[type="submit"].special:active,
