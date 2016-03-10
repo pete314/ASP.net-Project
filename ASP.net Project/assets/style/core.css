@@ -1354,6 +1354,10 @@ Author: Peter Nagy
     width: 80%;
 }
 
+.center-all {
+    margin: 0 auto;
+}
+
 .width-33{
     width: 30%;
 }
