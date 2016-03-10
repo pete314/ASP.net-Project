@@ -64,7 +64,9 @@
   <ItemGroup>
     <Content Include="assets\js\core.js" />
     <Content Include="assets\style\core.css" />
+    <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
+    <Content Include="forgotten_password.aspx" />
     <Content Include="index.aspx" />
     <Content Include="store_items.aspx" />
     <Content Include="Web.config" />
@@ -76,6 +78,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forgotten_password.aspx.cs">
+      <DependentUpon>forgotten_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgotten_password.aspx.designer.cs">
+      <DependentUpon>forgotten_password.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
