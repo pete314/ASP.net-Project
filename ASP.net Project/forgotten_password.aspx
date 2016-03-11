@@ -13,19 +13,19 @@
                         <asp:textbox runat="server" id="email" /> 
                     </div>
                     <div style="padding: 0.5em;">
-                        <input type="submit" value="Start reset" class="button special" style="color: black; float: rigth">
+                        <asp:Button ID="btnPassReset" runat="server" Text="Reset Password" CssClass="button special" OnClick="btnPassReset_Click" />
                     </div>
                 </form>
                 Need help with login?<br>
                 <a href="login.aspx">Login</a> | 
                 <a href="register.aspx">Register</a>
             </div>
+        <center>
+        <asp:Label ID="labelReset" runat="server" Text=""></asp:Label>
+        </center>
         </div>
     
     <!-- KEEP INVISIBLES FROM HERE-->
-    <asp:SqlDataSource ID="dsStoreUsers" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_store_store_items_connection %>" SelectCommand="SELECT [id], [name], [email], [password] FROM [users] WHERE ([email] = @email) ORDER BY [id]">
-        <SelectParameters>
-            <asp:FormParameter FormField="email" Name="email" Type="String" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="dsStoreUsers" runat="server" ConnectionString="<%$ ConnectionStrings:sergiosStoreConnectionStringUsers %>" SelectCommand="SELECT * FROM [users]">
     </asp:SqlDataSource>
 </asp:Content>

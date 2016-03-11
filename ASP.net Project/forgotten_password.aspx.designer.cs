@@ -31,6 +31,24 @@ namespace ASP.net_Project {
         protected global::System.Web.UI.WebControls.TextBox email;
         
         /// <summary>
+        /// btnPassReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPassReset;
+        
+        /// <summary>
+        /// labelReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelReset;
+        
+        /// <summary>
         /// dsStoreUsers control.
         /// </summary>
         /// <remarks>
