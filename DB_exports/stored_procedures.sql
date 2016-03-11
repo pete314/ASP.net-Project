@@ -37,13 +37,16 @@ as
 Begin
  Declare @UserId int
  
- If(Exists(Select @UserId = user_id from password_reset_token where id = @TOKEN))
+ If(Exists(Select user_id from password_reset_token where id = @TOKEN))
  Begin
-  Select 1 as IsValidToken, @UserId as USER
+  -- todo: re-jig this as there is two select(cached but still)...
+  Select @UserId = user_id from password_reset_token where id = @TOKEN
+
+  Select 1 as IsValidToken, @UserId as USERID
  End
  Else
  Begin
-  Select 0 as IsValidToken, @UserId as USER
+  Select 0 as IsValidToken, @UserId as USERID
  End
 End
 
@@ -60,13 +63,13 @@ Begin
  End
  Else
  Begin
-  Update tblUsers set
+  Update users set
   [password] = @Password
   where id = @UserId
   
   -- delete token
   Delete from password_reset_token
-  where Id = @GUID
+  where id = @GUID
   
   Select 1 as IsPasswordChanged
  End

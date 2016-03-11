@@ -13,6 +13,15 @@ namespace ASP.net_Project {
     public partial class forgotten_password {
         
         /// <summary>
+        /// labelReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelReset;
+        
+        /// <summary>
         /// ForgottenPassForm control.
         /// </summary>
         /// <remarks>
@@ -38,15 +47,6 @@ namespace ASP.net_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPassReset;
-        
-        /// <summary>
-        /// labelReset control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelReset;
         
         /// <summary>
         /// dsStoreUsers control.

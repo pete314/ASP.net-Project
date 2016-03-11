@@ -66,9 +66,10 @@
     <Content Include="assets\style\core.css" />
     <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
-    <Content Include="forgotten_password.aspx" />
+    <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
-    <Content Include="store_items.aspx" />
+    <Content Include="store\store_items.aspx" />
+    <Content Include="user\set_password.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -78,11 +79,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forgotten_password.aspx.cs">
+    <Compile Include="user\forgotten_password.aspx.cs">
       <DependentUpon>forgotten_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="forgotten_password.aspx.designer.cs">
+    <Compile Include="user\forgotten_password.aspx.designer.cs">
       <DependentUpon>forgotten_password.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
@@ -100,12 +101,19 @@
     <Compile Include="store_core.Master.designer.cs">
       <DependentUpon>store_core.Master</DependentUpon>
     </Compile>
-    <Compile Include="store_items.aspx.cs">
+    <Compile Include="store\store_items.aspx.cs">
       <DependentUpon>store_items.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="store_items.aspx.designer.cs">
+    <Compile Include="store\store_items.aspx.designer.cs">
       <DependentUpon>store_items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\set_password.aspx.cs">
+      <DependentUpon>set_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\set_password.aspx.designer.cs">
+      <DependentUpon>set_password.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

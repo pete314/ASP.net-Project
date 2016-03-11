@@ -14,7 +14,9 @@ namespace ASP.net_Project
     public partial class forgotten_password : System.Web.UI.Page
     {
         //Holding the link to the password reset page
-        const string PASSWORD_SET_PAGE="";
+        const string PASSWORD_SET_PAGE= "/user/set_password.aspx?token=";
+        const string DEFAULT_SENDER_ACCOUNT = "segios.gmit@gmail.com";
+        const string DEFAULT_SENDER_PASSWORD = "Hfl8375uQ4nRJfdvy54mueG";
         const Boolean DEBUG = true;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -30,6 +32,12 @@ namespace ASP.net_Project
         /// <param name="e"></param>
         protected void btnPassReset_Click(object sender, EventArgs e)
         {
+            if (!validEmail(email.Text)) {
+                labelReset.ForeColor = System.Drawing.Color.Red;
+                labelReset.Text = "Not valid email!";
+                return;
+            }
+
             //Insted complex try cache :)
             using (SqlConnection connection = new SqlConnection(@dsStoreUsers.ConnectionString))
             {
@@ -63,26 +71,47 @@ namespace ASP.net_Project
 
         /// <summary>
         /// Author: Peter Nagy
+        /// Description: Simple validation of email address
+        /// </summary>
+        /// <param name="email">Address to check</param>
+        /// <returns>true if valid</returns>
+        protected bool validEmail(string email) {
+            try{
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }catch{
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Author: Peter Nagy
         /// Description: Send user notification email for password reset
         /// </summary>
         /// <param name="userEmailAddress">Registered user email address</param>
         /// <param name="userName">The user name belonging to email</param>
         /// <param name="token">The generated password reset token</param>
         protected void sendEmailNotification(string userEmailAddress, string userName, string token) {
-            MailMessage mailMessage = new MailMessage("segios.gmit@gmail.com", userEmailAddress);
+            MailMessage mailMessage = new MailMessage(DEFAULT_SENDER_ACCOUNT, userEmailAddress);
             mailMessage.IsBodyHtml = true;
-            mailMessage.Body = createEmailPasswordTokenTemplate(userName, token);
+            mailMessage.Body = createEmailPasswordTokenTemplate(userName, token, true);
             mailMessage.Subject = "Sergio's store - password reset token";
             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587);
 
             smtpClient.Credentials = new System.Net.NetworkCredential()
             {
-                UserName = "segios.gmit@gmail.com",
-                Password = "Hfl8375uQ4nRJfdvy54mueG"
+                UserName = DEFAULT_SENDER_ACCOUNT,
+                Password = DEFAULT_SENDER_PASSWORD
             };
 
             smtpClient.EnableSsl = true;
-            smtpClient.Send(mailMessage);
+            try
+            {
+                smtpClient.Send(mailMessage);
+            }
+            catch {
+                 //Most likely there is no usable network connection or wrong credentials
+            }
         }
 
         /// <summary>
