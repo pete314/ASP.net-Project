@@ -13,6 +13,15 @@ namespace ASP.net_Project {
     public partial class forgotten_password {
         
         /// <summary>
+        /// masterForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm masterForm;
+        
+        /// <summary>
         /// labelReset control.
         /// </summary>
         /// <remarks>

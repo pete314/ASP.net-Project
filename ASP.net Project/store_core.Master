@@ -14,13 +14,12 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server" id="masterForm">
      <!-- HEADER MENU FROM HERE-->
     <header id="header">
-        <h1 id="logo"><a href="index.html">Sergio's store</a></h1>
+        <h1 id="logo"><a href="index.aspx">Sergio's store</a></h1>
         <nav id="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/index.aspx">Home</a></li>
                 <li><a href="#">Brands</a>
                     <ul>
                         <li><a href="#">Samsung</a></li>
@@ -43,7 +42,8 @@
                     </ul>
                 </li>
                 <li>
-                    <asp:LinkButton PostBackUrl="~/user/Login.aspx" ID="lbtnLogin" runat="server">Login</asp:LinkButton></li>
+                        <a href="/user/Login.aspx" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a>
+                </li>
             </ul>
         </nav>
         <!-- HEADER SUB-MENU FROM HERE-->
@@ -52,7 +52,7 @@
     <!-- END HEADER MENU-->
     <!-- Breadcrumb start-->
     <div id="bradcrumb" class="top-offset-breadcrumb" style="color: black; margin-left: 10px; padding-top: 10px; padding-left: 10px;">
-        <a href="index.html"><i class="fa fa-home"></i>Home</a>
+        <a href="/index.aspx"><i class="fa fa-home"></i>Home</a>
         >>
         <a href="#">Some Page</a>
     </div>
@@ -135,6 +135,5 @@
     <!-- END FOOTER WRAPPER-->
     <!-- SCRIPTS FROM HERE-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-</form>
 </body>
 </html>

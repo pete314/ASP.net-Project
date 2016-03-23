@@ -770,8 +770,7 @@ Author: Peter Nagy
 
 	table {
 		margin: 0 0 2em 0;
-		width: 100%;
-	}
+		}
 
 		table tbody tr {
 			border: solid 1px rgba(255, 255, 255, 0.3);

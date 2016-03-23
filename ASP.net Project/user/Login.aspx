@@ -12,9 +12,15 @@
         {
             width: 33%;
         }
+
+        #loginValidation
+        {
+            color: red;
+        }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">     
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">  
+    <form runat="server" id="masterForm">   
     <table class="tableLogin">
             <tr>
                 <td colspan="3">Username</td>
@@ -22,6 +28,7 @@
             <tr>
                 <td colspan="3" align="center">
                     <asp:TextBox ID="txtUsername" runat="server" Width="150px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="loginUsernameValidator" runat="server" Display="None" ErrorMessage="Username is required" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -30,18 +37,28 @@
             <tr>
                 <td colspan="3" align="center">
                     <asp:TextBox ID="txtPassword" runat="server" Width="150px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="loginPasswordValidator" runat="server" Display="None" ErrorMessage="Password is required" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td align="center" id="noPassword">
-                    <asp:LinkButton ID="lbtnForgotPassword" PostBackUrl="~/user/forgotten_password.aspx" runat="server">Forgot Password?</asp:LinkButton>
+                    <asp:LinkButton ID="lbtnForgotPassword" PostBackUrl="~/user/forgotten_password.aspx" runat="server" CausesValidation="False">Forgot Password?</asp:LinkButton>
                 </td>
                 <td align="center" id="noPassword">
-                    <asp:LinkButton ID="lbtnLogin" runat="server">Login</asp:LinkButton>
+                    <asp:LinkButton ID="lbtnLogin"  ValidationGroup="login" runat="server">Login</asp:LinkButton>
                 </td>
                 <td align="center" id="noPassword">
-                    <asp:LinkButton ID="lbtnRegisterUser" PostBackUrl="~/user/Register.aspx" runat="server">Register</asp:LinkButton>
+                    <asp:LinkButton ID="lbtnRegisterUser" PostBackUrl="~/user/Register.aspx" runat="server" CausesValidation="False" EnableViewState="False">Register</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td id="loginValidation" colspan="3">
+                    <asp:RequiredFieldValidator ID="usernameLoginValidator" runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required" ValidationGroup="login"></asp:RequiredFieldValidator>
+                    <br />
+                    <br />
+                    <asp:RequiredFieldValidator ID="passwordLoginValidator" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="login"></asp:RequiredFieldValidator>
                 </td>
             </tr>
         </table>
+        </form>
 </asp:Content>
