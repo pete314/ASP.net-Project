@@ -3,6 +3,10 @@
     <title>Index page</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <center>
+    <h2 class="center-all">Welcome to Sergio's store</h2>
+    <h1>Most popular items</h1>
+    </center>
     <section class="item-wrapper">
         <img src="assets/img/s3-sample-pic.jpg" />
         <div class="item-details-wrapper">

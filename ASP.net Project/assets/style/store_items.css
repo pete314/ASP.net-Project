@@ -1,0 +1,9 @@
+﻿#content-main{
+ font-size: 100%;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: black;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
