@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="set_password.aspx.cs" Inherits="ASP.net_Project.user.set_password" %>
+﻿<%@ Page Title="Sergio's store - Set new password" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="set_password.aspx.cs" Inherits="ASP.net_Project.user.set_password" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="../assets/style/password_reset.css" type="text/css" media="screen" />
 </asp:Content>

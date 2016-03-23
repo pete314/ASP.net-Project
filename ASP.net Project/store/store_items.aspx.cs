@@ -12,16 +12,8 @@ namespace ASP.net_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-        /*
-        public override void VerifyRenderingInServerForm(Control control)
-        {
             
         }
-
-        protected void gvStoreItems_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-        }*/
+        
     }
 }
