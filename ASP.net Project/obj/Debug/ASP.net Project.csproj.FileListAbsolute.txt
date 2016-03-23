@@ -4,3 +4,9 @@ E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\bin\ASP.net 
 E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.csprojResolveAssemblyReference.cache
 E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.dll
 E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.pdb
+B:\Software Engineering Year 3 GMIT\Server Side RAD\Project\ASP.net-Project\ASP.net Project\bin\ASP.net Project.dll.config
+B:\Software Engineering Year 3 GMIT\Server Side RAD\Project\ASP.net-Project\ASP.net Project\bin\ASP.net Project.dll
+B:\Software Engineering Year 3 GMIT\Server Side RAD\Project\ASP.net-Project\ASP.net Project\bin\ASP.net Project.pdb
+B:\Software Engineering Year 3 GMIT\Server Side RAD\Project\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.csprojResolveAssemblyReference.cache
+B:\Software Engineering Year 3 GMIT\Server Side RAD\Project\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.dll
+B:\Software Engineering Year 3 GMIT\Server Side RAD\Project\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.pdb
