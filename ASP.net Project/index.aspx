@@ -35,29 +35,34 @@
         </center>
 
         <div>
-            <asp:GridView ID="gvwProducts" runat="server" Width="850px" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="dsStoreItems" PageSize="5" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+            <asp:GridView ID="gvwProducts" runat="server" Width="850px" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="dsStoreItems" PageSize="5" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" DataKeyNames="id" OnSelectedIndexChanged="gvwProducts_SelectedIndexChanged">
                 <Columns>
-                    <asp:BoundField DataField="brand" HeaderText="Brand" SortExpression="brand" >
-                    <HeaderStyle ForeColor="White" />
+                    <asp:BoundField DataField="id" HeaderText="Product Id" InsertVisible="False" ReadOnly="True" SortExpression="id">
+                        <HeaderStyle ForeColor="White" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="model" HeaderText="Model" SortExpression="model"> 
-                    <HeaderStyle ForeColor="White" />
+                    <asp:BoundField DataField="brand" HeaderText="Brand" SortExpression="brand">
+                     <HeaderStyle ForeColor="White"/>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="model" HeaderText="Model" SortExpression="model">
+                     <HeaderStyle ForeColor="White" /> 
                     </asp:BoundField>
                     <asp:BoundField DataField="release" HeaderText="Release" SortExpression="release">
-                    <HeaderStyle ForeColor="White" />
+                        <HeaderStyle ForeColor="White" />
                     </asp:BoundField>
                     <asp:BoundField DataField="description" HeaderText="Description" SortExpression="description">
-                    <HeaderStyle ForeColor="White" />
+                        <HeaderStyle ForeColor="White" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="price" DataFormatString="{0:c}" HeaderText="Price €" SortExpression="price">
-                    <HeaderStyle ForeColor="White" />
+                    <asp:BoundField DataField="price" HeaderText="Price" SortExpression="Price">
+                      <HeaderStyle ForeColor="White" />
                     </asp:BoundField>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                    <asp:CommandField ButtonType="Button" ShowSelectButton="True">
+                    <ControlStyle BorderStyle="Inset" />
+                    </asp:CommandField>
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                 <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
                 <PagerSettings FirstPageText="&lt;&lt;" LastPageText="&gt;&gt;" Mode="NextPreviousFirstLast" NextPageText="&gt;" PreviousPageText="&lt;" />
-                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                <PagerStyle BackColor="White" HorizontalAlign="Right" ForeColor="#CC6699" />
                 <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
                 <SortedAscendingCellStyle BackColor="#F7F7F7" />
                 <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
@@ -66,6 +71,6 @@
             </asp:GridView>
         </div>
         <br />
-        <asp:SqlDataSource ID="dsStoreItems" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_storeConnectionString %>" SelectCommand="SELECT [brand], [model], [release], [description], [price] FROM [store_items]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="dsStoreItems" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_storeConnectionString %>" SelectCommand="SELECT [brand], [model], [release], [description], [price], [id] FROM [store_items]"></asp:SqlDataSource>
     </form>
 </asp:Content>

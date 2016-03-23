@@ -14,5 +14,10 @@ namespace ASP.net_Project
         {
 
         }
+
+        protected void gvwProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
