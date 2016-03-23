@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="../assets/style/password_reset.css" type="text/css" media="screen" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    
+    <form runat="server">
     <div id="login-wrapper">
         <center>
         <asp:Label ID="labelReset" runat="server" Text=""></asp:Label>
@@ -23,7 +23,7 @@
             </div>
         
         </div>
-    
+    </form>
     <!-- KEEP INVISIBLES FROM HERE-->
     <asp:SqlDataSource ID="dsStoreUsers" runat="server" ConnectionString="<%$ ConnectionStrings:sergiosStoreConnectionStringUsers %>" SelectCommand="SELECT * FROM [users]">
     </asp:SqlDataSource>

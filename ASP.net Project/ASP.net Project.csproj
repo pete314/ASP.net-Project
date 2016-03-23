@@ -78,6 +78,7 @@
     <Content Include="assets\style\core.css" />
     <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
+    <Content Include="store\current_cart.aspx" />
     <Content Include="store\store_item_images.aspx" />
     <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
@@ -95,6 +96,13 @@
     <Content Include="App_Code\StoreItems.cs" />
     <Content Include="App_Code\StoreItemImagesModel.cs" />
     <Compile Include="App_Code\StoreItemImagesEntity.cs" />
+    <Compile Include="store\current_cart.aspx.cs">
+      <DependentUpon>current_cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\current_cart.aspx.designer.cs">
+      <DependentUpon>current_cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="store\store_item_images.aspx.cs">
       <DependentUpon>store_item_images.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
