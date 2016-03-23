@@ -16,7 +16,7 @@
                     <asp:BoundField DataField="model" HeaderText="model" SortExpression="model" />
                     <asp:BoundField DataField="release" HeaderText="release" SortExpression="release" />
                     <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
-                    <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
+                    <asp:BoundField DataField="price" DataFormatString="{0:c}" HeaderText="price" SortExpression="price" />
                 </Columns>
             </asp:GridView>
         </div>
