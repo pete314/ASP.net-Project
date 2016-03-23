@@ -14,7 +14,7 @@ namespace ASP.net_Project
     public partial class forgotten_password : System.Web.UI.Page
     {
         //Holding the link to the password reset page
-        const string PASSWORD_SET_PAGE= "/user/set_password.aspx?token=";
+        const string PASSWORD_SET_PAGE= "/user/set_password.aspx";
         const string DEFAULT_SENDER_ACCOUNT = "segios.gmit@gmail.com";
         const string DEFAULT_SENDER_PASSWORD = "Hfl8375uQ4nRJfdvy54mueG";
         const Boolean DEBUG = true;

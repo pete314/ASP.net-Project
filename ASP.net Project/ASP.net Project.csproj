@@ -44,7 +44,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,6 +78,7 @@
     <Content Include="assets\style\core.css" />
     <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
+    <Content Include="store\store_item_images.aspx" />
     <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
     <Content Include="store\store_items.aspx" />
@@ -79,6 +92,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\StoreItems.cs" />
+    <Content Include="App_Code\StoreItemImagesModel.cs" />
+    <Compile Include="App_Code\StoreItemImagesEntity.cs" />
+    <Compile Include="store\store_item_images.aspx.cs">
+      <DependentUpon>store_item_images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\store_item_images.aspx.designer.cs">
+      <DependentUpon>store_item_images.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\forgotten_password.aspx.cs">
       <DependentUpon>forgotten_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,6 +147,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\style\font-awesome.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

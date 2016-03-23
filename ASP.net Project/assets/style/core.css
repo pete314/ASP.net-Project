@@ -754,6 +754,11 @@ Author: Peter Nagy
         
     }
     
+    #content-main{
+ font-size: 100%;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: black;
+}
 
 /* Table */
 

@@ -4,3 +4,7 @@ E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\bin\ASP.net 
 E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.csprojResolveAssemblyReference.cache
 E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.dll
 E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\obj\Debug\ASP.net Project.pdb
+E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\bin\EntityFramework.dll
+E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\bin\EntityFramework.SqlServer.dll
+E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\bin\EntityFramework.xml
+E:\Work\GMIT\PROJECTS\ServerSideRad\ASP.net-Project\ASP.net Project\bin\EntityFramework.SqlServer.xml

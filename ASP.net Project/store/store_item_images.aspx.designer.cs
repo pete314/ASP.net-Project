@@ -13,15 +13,6 @@ namespace ASP.net_Project.store {
     public partial class store_item_images {
         
         /// <summary>
-        /// StoreItemImagesForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm StoreItemImagesForm;
-        
-        /// <summary>
         /// labelError control.
         /// </summary>
         /// <remarks>
@@ -29,5 +20,14 @@ namespace ASP.net_Project.store {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labelError;
+        
+        /// <summary>
+        /// dsStoreItemImages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource dsStoreItemImages;
     }
 }

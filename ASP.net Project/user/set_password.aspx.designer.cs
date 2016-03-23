@@ -13,15 +13,6 @@ namespace ASP.net_Project.user {
     public partial class set_password {
         
         /// <summary>
-        /// ForgottenPassForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm ForgottenPassForm;
-        
-        /// <summary>
         /// labelError control.
         /// </summary>
         /// <remarks>

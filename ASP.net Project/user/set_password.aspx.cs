@@ -21,7 +21,6 @@ namespace ASP.net_Project.user
                     labelError.Text = "Invalid token";
                 }
             }
-
         }
 
         protected void btnPassReset_Click(object sender, EventArgs e)

@@ -3,7 +3,9 @@
     <link rel="stylesheet" href="../assets/style/password_reset.css" type="text/css" media="screen" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <form runat="server" id="StoreItemImagesForm">
         <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
-    </form>
+        
+    <!-- KEEP INVISIBLES FROM HERE-->
+    <asp:SqlDataSource ID="dsStoreItemImages" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_store_store_items_connection %>" SelectCommand="SELECT * FROM [store_item_img]"></asp:SqlDataSource>
+
 </asp:Content>
