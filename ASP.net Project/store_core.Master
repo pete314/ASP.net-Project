@@ -14,6 +14,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form runat="server" id="masterForm">
      <!-- HEADER MENU FROM HERE-->
     <header id="header">
         <h1 id="logo"><a href="index.html">Sergio's store</a></h1>
@@ -41,7 +42,8 @@
                         <li><a href="#">Windows</a></li>
                     </ul>
                 </li>
-                <li><a href="#" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a></li>
+                <li>
+                    <asp:LinkButton PostBackUrl="~/user/Login.aspx" ID="lbtnLogin" runat="server">Login</asp:LinkButton></li>
             </ul>
         </nav>
         <!-- HEADER SUB-MENU FROM HERE-->
@@ -62,7 +64,7 @@
         <div id="content-main" class="center-all width-80" style="background-color: white;">
             <!-- ASP WRAPPER STARTS HERE -->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-        
+
             </asp:ContentPlaceHolder>
             <!-- ASP WRAPPER ENDS HERE -->
         </div>
@@ -133,5 +135,6 @@
     <!-- END FOOTER WRAPPER-->
     <!-- SCRIPTS FROM HERE-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</form>
 </body>
 </html>

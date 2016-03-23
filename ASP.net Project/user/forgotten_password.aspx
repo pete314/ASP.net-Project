@@ -10,7 +10,7 @@
         </center>
             <div id="reset-pass-panel" text="your@email.here">
                 <center> Reset password</center>
-                <form runat="server" id="ForgottenPassForm">
+                <div id="ForgottenPassForm">
                     <div style="padding: 0.5em;">
                         <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i>Your account email</span>
                         <asp:textbox runat="server" id="email"/> 
@@ -18,10 +18,10 @@
                     <div style="padding: 0.5em;">
                         <asp:Button ID="btnPassReset" runat="server" Text="Reset Password" CssClass="button special" OnClick="btnPassReset_Click" />
                     </div>
-                </form>
+                </div>
                 Need help with login?<br>
-                <a href="login.aspx">Login</a> | 
-                <a href="register.aspx">Register</a>
+                <a href="Login.aspx">Login</a> | 
+                <a href="Register.aspx">Register</a>
             </div>
         
         </div>

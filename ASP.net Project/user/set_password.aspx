@@ -37,14 +37,14 @@
                     </div>
                 </form>
                 Need help with login?<br>
-                <a href="~/users/login.aspx">Login</a> | 
-                <a href="~/users/register.aspx">Register</a>
+                <a href="~/user/Login.aspx">Login</a> | 
+                <a href="~/user/register.aspx">Register</a>
             </div>
         
         </div>
     
     <!-- KEEP INVISIBLES FROM HERE-->
     <br />
-    <asp:SqlDataSource ID="dsStoreUsers" runat="server" ConnectionString="<%$ ConnectionStrings:sergiosStoreConnectionStringUsers %>" SelectCommand="SELECT * FROM [users]">
+    <asp:SqlDataSource ID="dsStoreUsers" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_storeConnectionString %>" SelectCommand="SELECT * FROM [users]">
     </asp:SqlDataSource>
 </asp:Content>

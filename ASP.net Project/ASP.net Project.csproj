@@ -69,6 +69,8 @@
     <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
     <Content Include="store\store_items.aspx" />
+    <Content Include="user\Login.aspx" />
+    <Content Include="user\Register.aspx" />
     <Content Include="user\set_password.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -107,6 +109,20 @@
     </Compile>
     <Compile Include="store\store_items.aspx.designer.cs">
       <DependentUpon>store_items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\set_password.aspx.cs">
       <DependentUpon>set_password.aspx</DependentUpon>
