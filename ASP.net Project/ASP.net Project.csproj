@@ -66,6 +66,7 @@
     <Content Include="assets\style\core.css" />
     <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
+    <Content Include="Global.asax" />
     <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
     <Content Include="store\store_items.aspx" />
@@ -81,6 +82,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="user\forgotten_password.aspx.cs">
       <DependentUpon>forgotten_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

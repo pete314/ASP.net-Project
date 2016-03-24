@@ -87,7 +87,7 @@
         </tr>
         <tr>
             <td colspan="2" align="center" id="regButton">
-                <asp:LinkButton ID="lbtnRegisterUser" ValidationGroup="registration" runat="server">Register</asp:LinkButton>
+                <asp:LinkButton ID="lbtnRegisterUser" ValidationGroup="registration" runat="server" OnClick="lbtnRegisterUser_Click">Register</asp:LinkButton>
             </td>
         </tr>
         <tr>
@@ -107,6 +107,11 @@
                 <asp:RequiredFieldValidator ID="regCountryValidator" runat="server" ControlToValidate="txtCountry" ErrorMessage="Country Required" ValidationGroup="registration"></asp:RequiredFieldValidator>
 &nbsp;
                 <asp:RequiredFieldValidator ID="regZipValidator" runat="server" ControlToValidate="txtZipCode" ErrorMessage="Zip Code Required" ValidationGroup="registration"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="lblError" runat="server"></asp:Label>
             </td>
         </tr>
         </table>

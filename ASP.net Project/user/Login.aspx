@@ -20,7 +20,7 @@
 
         #loginHeader
         {
-            font-size: 150%;
+            font-size: 200%;
         }
     </style>
 </asp:Content>
@@ -35,7 +35,7 @@
             </tr>
             <tr>
                 <td colspan="3" align="center">
-                    <asp:TextBox ID="txtUsername" runat="server" Width="150px"></asp:TextBox>
+                    <asp:TextBox ID="txtUsername" runat="server" Width="250px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="loginUsernameValidator" runat="server" Display="None" ErrorMessage="Username is required" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
                 </td>
             </tr>
@@ -44,7 +44,7 @@
             </tr>
             <tr>
                 <td colspan="3" align="center">
-                    <asp:TextBox ID="txtPassword" runat="server" Width="150px"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" Width="250px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="loginPasswordValidator" runat="server" Display="None" ErrorMessage="Password is required" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
                 </td>
             </tr>
@@ -53,7 +53,7 @@
                     <asp:LinkButton ID="lbtnForgotPassword" PostBackUrl="~/user/forgotten_password.aspx" runat="server" CausesValidation="False">Forgot Password?</asp:LinkButton>
                 </td>
                 <td align="center" id="noPassword">
-                    <asp:LinkButton ID="lbtnLogin"  ValidationGroup="login" runat="server">Login</asp:LinkButton>
+                    <asp:LinkButton ID="lbtnLogin"  ValidationGroup="login" runat="server" OnClick="lbtnLogin_Click">Login</asp:LinkButton>
                 </td>
                 <td align="center" id="noPassword">
                     <asp:LinkButton ID="lbtnRegisterUser" PostBackUrl="~/user/Register.aspx" runat="server" CausesValidation="False" EnableViewState="False">Register</asp:LinkButton>
@@ -65,6 +65,13 @@
                     <br />
                     <br />
                     <asp:RequiredFieldValidator ID="passwordLoginValidator" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required" ValidationGroup="login"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    
+                    <asp:Label ID="lblLoginValid" runat="server"></asp:Label>
+                    
                 </td>
             </tr>
         </table>
