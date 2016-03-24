@@ -17,11 +17,19 @@
         {
             color: red;
         }
+
+        #loginHeader
+        {
+            font-size: 150%;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">  
     <form runat="server" id="masterForm">   
     <table class="tableLogin">
+            <tr>
+                <td id="loginHeader" colspan="3">User Login</td>
+            </tr>
             <tr>
                 <td colspan="3">Username</td>
             </tr>

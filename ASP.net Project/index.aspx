@@ -35,7 +35,7 @@
         </center>
 
         <div>
-            <asp:GridView ID="gvwProducts" runat="server" Width="850px" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="dsStoreItems" PageSize="5" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" DataKeyNames="id" OnSelectedIndexChanged="gvwProducts_SelectedIndexChanged">
+            <asp:GridView ID="gvwProducts" runat="server" Width="860px" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="dsStoreItems" PageSize="4" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" DataKeyNames="id" OnSelectedIndexChanged="gvwProducts_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="Product Id" InsertVisible="False" ReadOnly="True" SortExpression="id">
                         <HeaderStyle ForeColor="White" />
@@ -55,7 +55,7 @@
                     <asp:BoundField DataField="price" HeaderText="Price" SortExpression="Price">
                       <HeaderStyle ForeColor="White" />
                     </asp:BoundField>
-                    <asp:CommandField ButtonType="Button" ShowSelectButton="True">
+                    <asp:CommandField ButtonType="Button" ShowSelectButton="True" SelectText="Select Item">
                     <ControlStyle BorderStyle="Inset" />
                     </asp:CommandField>
                 </Columns>
@@ -72,5 +72,7 @@
         </div>
         <br />
         <asp:SqlDataSource ID="dsStoreItems" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_storeConnectionString %>" SelectCommand="SELECT [brand], [model], [release], [description], [price], [id] FROM [store_items]"></asp:SqlDataSource>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;
     </form>
 </asp:Content>

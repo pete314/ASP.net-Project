@@ -17,7 +17,8 @@ namespace ASP.net_Project
 
         protected void gvwProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            GridViewRow row = gvwProducts.SelectedRow;
+            String productID = row.Cells[0].Text;
         }
     }
 }
