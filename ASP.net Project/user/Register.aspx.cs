@@ -12,15 +12,16 @@ namespace ASP.net_Project.user
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Register page so first get value to indicate if welcome popup was shown
+            //First we get value to indicate if welcome popup was shown
             int alreadyLoggedIn = (int)Session["userValidPopup"];
 
-            //If it was shown then user is alread logged in
+            //If it was shown then user is alread logged in hence this page isnt needed, we dont need to register a user thats already
+            //logged in.
             if (alreadyLoggedIn == 1)
             {
-                //Output message and disable related controls
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "Welcome", "<script>alert('You are already logged in');</script>");
-                txtName.Enabled = false;
+                //Output message to alert user they do not need to register as they are logged in already
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Already Registered", "<script>alert('You are already logged in');</script>");
+                txtName.Enabled = false;    //Then disable all related controls which stops the user from registering again
                 txtEmail.Enabled = false;
                 txtPassword.Enabled = false;
                 txtStreet.Enabled = false;
@@ -35,7 +36,7 @@ namespace ASP.net_Project.user
         //Register user button click event
         protected void lbtnRegisterUser_Click(object sender, EventArgs e)
         {
-            //retrieve values from input fields
+            //retrieve values from all the input fields
             String name = txtName.Text;
             String email = txtEmail.Text;
             String password = txtPassword.Text;
@@ -45,12 +46,12 @@ namespace ASP.net_Project.user
             String country = txtCountry.Text;
             String zip = txtZipCode.Text;
 
-            //Connection String
+            //Create the Connection String
             String conString = "Data Source=KIERANSPC\\SQLEXPRESS;Initial Catalog=sergios_store;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(); //get connection
-            connection.ConnectionString = conString;
+            SqlConnection connection = new SqlConnection(); //Create connection object
+            connection.ConnectionString = conString;    //Give the conection objects, connection property the required connection string
 
-            //insert statement
+            //Create an SQL insert statement
             String insertStmnt = "INSERT users (name, email, password, address_street, address_city, address_state, address_country,"+
                                     " address_code) VALUES ('"+name+"', '"+email+"', '"+password+"', '"+street+"', '"+city+"', '"+county+"', '"+country+"', '"+zip+"')";
 
@@ -72,7 +73,7 @@ namespace ASP.net_Project.user
             }
             else//otherwise
             {
-                lblError.Text = "There was a problem adding this user, please try again";//otuput a relavant error message
+                lblError.Text = "There was a problem adding this user, please try again";//output a relavant error message
             }
         }
     }
