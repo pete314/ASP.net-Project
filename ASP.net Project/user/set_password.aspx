@@ -45,6 +45,6 @@
     
     <!-- KEEP INVISIBLES FROM HERE-->
     <br />
-    <asp:SqlDataSource ID="dsStoreUsers" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_storeConnectionString %>" SelectCommand="SELECT * FROM [users]">
+    <asp:SqlDataSource ID="dsStoreUsers" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_store_store_items_connection %>" SelectCommand="SELECT * FROM [users]" ProviderName="<%$ ConnectionStrings:sergios_store_store_items_connection.ProviderName %>">
     </asp:SqlDataSource>
 </asp:Content>

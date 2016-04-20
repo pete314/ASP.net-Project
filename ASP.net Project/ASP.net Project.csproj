@@ -67,9 +67,11 @@
     <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
     <Content Include="Global.asax" />
+    <Content Include="store\current_cart.aspx" />
+    <Content Include="store\store_items.aspx" />
+    <Content Include="store\store_item_images.aspx" />
     <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
-    <Content Include="store\store_items.aspx" />
     <Content Include="user\Login.aspx" />
     <Content Include="user\Register.aspx" />
     <Content Include="user\set_password.aspx" />
@@ -82,8 +84,32 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\StoreItemImagesEntity.cs" />
+    <Compile Include="App_Code\StoreItemImagesModel.cs" />
+    <Compile Include="App_Code\StoreItems.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="store\current_cart.aspx.cs">
+      <DependentUpon>current_cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\current_cart.aspx.designer.cs">
+      <DependentUpon>current_cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store\store_items.aspx.cs">
+      <DependentUpon>store_items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\store_items.aspx.designer.cs">
+      <DependentUpon>store_items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store\store_item_images.aspx.cs">
+      <DependentUpon>store_item_images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\store_item_images.aspx.designer.cs">
+      <DependentUpon>store_item_images.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\forgotten_password.aspx.cs">
       <DependentUpon>forgotten_password.aspx</DependentUpon>
@@ -106,13 +132,6 @@
     </Compile>
     <Compile Include="store_core.Master.designer.cs">
       <DependentUpon>store_core.Master</DependentUpon>
-    </Compile>
-    <Compile Include="store\store_items.aspx.cs">
-      <DependentUpon>store_items.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="store\store_items.aspx.designer.cs">
-      <DependentUpon>store_items.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
