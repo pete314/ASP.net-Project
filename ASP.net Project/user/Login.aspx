@@ -76,4 +76,6 @@
             </tr>
         </table>
         </form>
+    <asp:SqlDataSource ID="dsStoreItems" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_store_store_items_connection %>" SelectCommand="SELECT [brand], [model], [release], [description], [price], [id] FROM [store_items]" ProviderName="<%$ ConnectionStrings:sergios_store_store_items_connection.ProviderName %>"></asp:SqlDataSource>
+        
 </asp:Content>

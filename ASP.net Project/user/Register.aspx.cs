@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -47,9 +48,9 @@ namespace ASP.net_Project.user
             String zip = txtZipCode.Text;
 
             //Create the Connection String
-            String conString = "Data Source=KIERANSPC\\SQLEXPRESS;Initial Catalog=sergios_store;Integrated Security=True";
+            //String conString = "Data Source=KIERANSPC\\SQLEXPRESS;Initial Catalog=sergios_store;Integrated Security=True";
             SqlConnection connection = new SqlConnection(); //Create connection object
-            connection.ConnectionString = conString;    //Give the conection objects, connection property the required connection string
+            connection.ConnectionString = DBGateway();    //Give the conection objects, connection property the required connection string
 
             //Create an SQL insert statement
             String insertStmnt = "INSERT users (name, email, password, address_street, address_city, address_state, address_country,"+
@@ -75,6 +76,14 @@ namespace ASP.net_Project.user
             {
                 lblError.Text = "There was a problem adding this user, please try again";//output a relavant error message
             }
+        }
+
+        protected string DBGateway()
+        {
+            ConnectionStringSettings mySetting = ConfigurationManager.ConnectionStrings["sergios_store_store_items_connection"];
+            if (mySetting == null || string.IsNullOrEmpty(mySetting.ConnectionString))
+                throw new Exception("Fatal error: missing connecting string in web.config file");
+            return mySetting.ConnectionString;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -34,9 +35,10 @@ namespace ASP.net_Project.user
             bool validLogin = false;
 
             //Establish a connection object using the connection string to the database
-            String conString = "Data Source=KIERANSPC\\SQLEXPRESS;Initial Catalog=sergios_store;Integrated Security=True";
+            //Refactored into DBGateway()
+            //String conString = "Data Source=USER-PC;Initial Catalog=sergios_store;Integrated Security=True";
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = conString;
+            connection.ConnectionString = DBGateway();
             
             connection.Open();                                                    //open connection
             String selectStmnt = "SELECT email, password FROM users";             //create select statement
@@ -69,5 +71,14 @@ namespace ASP.net_Project.user
                 lblLoginValid.Text = "Username and Password combination is not valid";
             }
         }
+        protected string DBGateway()
+        {
+            ConnectionStringSettings mySetting = ConfigurationManager.ConnectionStrings["sergios_store_store_items_connection"];
+            if (mySetting == null || string.IsNullOrEmpty(mySetting.ConnectionString))
+                throw new Exception("Fatal error: missing connecting string in web.config file");
+            return mySetting.ConnectionString;
+        }
     }
+
+    
 }
