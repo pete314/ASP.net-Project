@@ -11,15 +11,15 @@ namespace ASP.net_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int allowed = Convert.ToInt32(Session["userValidPopup"].ToString());//retreived value indicting if welcome popup was outputted
+            int allowed = Convert.ToInt32(Session["userValidPopup"].ToString());//retreived value from session variable indicting if welcome popup was outputted
 
-            //if the popup was outputted and we have a username and password in cookies
+            //Check the cookies for username and password are set and that allowed is 0 (Meaning we havent shown any welcome popup)
             if (Request.Cookies["username"] != null && Request.Cookies["password"] != null && allowed == 0)
             {
-                //Output welcom message containing users username
-                String username = Request.Cookies["username"].Value.ToString();
+                //If all is true then we can ouptu the welcome message with username retrieved from the cookie
+                String username = Request.Cookies["username"].Value.ToString();     //Request the cookies value and show a popup
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Welcome", "<script>alert('Successful Login - Welcome "+username+"');</script>");
-                Session["userValidPopup"] = 1;
+                Session["userValidPopup"] = 1;  //Update session variable to show popup was shown. It should not be shown again.
             }
         }
 
@@ -29,8 +29,9 @@ namespace ASP.net_Project
             GridViewRow row = gvwProducts.SelectedRow;
             String productID = row.Cells[0].Text;
 
-            //can add the productt id to a cookie or session state variable 
-            //then redirect to Cians page
+            //Can add the product id to a cookie or session state variable here
+            //Then redirect to Cians page. Cian should then use his page load event to retrieve this cookie and use the 
+            //product id it holds to get product data from the database.
         }
     }
 }
