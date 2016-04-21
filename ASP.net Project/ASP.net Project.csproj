@@ -67,6 +67,7 @@
     <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
     <Content Include="Global.asax" />
+    <Content Include="store\checkout.aspx" />
     <Content Include="store\current_cart.aspx" />
     <Content Include="store\store_items.aspx" />
     <Content Include="store\store_item_images.aspx" />
@@ -89,6 +90,13 @@
     <Compile Include="App_Code\StoreItems.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="store\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="store\current_cart.aspx.cs">
       <DependentUpon>current_cart.aspx</DependentUpon>

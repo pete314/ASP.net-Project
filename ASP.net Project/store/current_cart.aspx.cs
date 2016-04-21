@@ -63,7 +63,7 @@ namespace ASP.net_Project.store
                         insertCmd.Parameters.AddWithValue("ORDERID", order_id);
                         insertCmd.Parameters.AddWithValue("ITEMID", product_id);
                         insertCmd.ExecuteNonQuery();
-                        notifySuccess();// redirect the user to the checkout page which will confirm the order
+                        notifySuccess((int)order_id);// redirect the user to the checkout page which will confirm the order
                     }
                 }
             }
@@ -71,8 +71,9 @@ namespace ASP.net_Project.store
             Page.ClientScript.RegisterStartupScript(this.GetType(), "Welcome", "<script>alert('Please login to make a purchace');</script>");
         }
 
-        protected void notifySuccess() {
+        protected void notifySuccess(int order_id) {
             Request.Cookies["product_id"].Value = null;
+            Request.Cookies["order_success"].Value = order_id.ToString();
             Response.Redirect("~/store/checkout.aspx");
         }
 
