@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace ASP.net_Project.store
                 if (Request.Cookies["product_id"] != null)
                 {
                     string product_id = Request.Cookies["product_id"].Value.ToString();
+
                 }
                 else {
                     buyBtn.Visible = false;
@@ -30,9 +32,80 @@ namespace ASP.net_Project.store
 
         protected void buyBtn_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO store_orders (user_id)" +
-                            "VALUES(@USERID)";
+            if (Request.Cookies["userid"] != null)
+            {
+                int user_id = Convert.ToInt32(Request.Cookies["userid"].Value.ToString());
+                if (checkUser(user_id))
+                {
+                    //@todo: should validate that the product id actually exists
+                    int product_id = Convert.ToInt32(Request.Cookies["product_id"].Value.ToString());
 
+                    string insert_so_query = "INSERT INTO store_orders (user_id) " +
+                                    "OUTPUT INSERTED.ID " +
+                                    "VALUES(@USERID)";
+                    string insert_soi_query = "insert into store_order_items (order_id, item_id, qty) " +
+                                    "values(@ORDERID, @ITEMID, 1)";
+
+                    using (SqlConnection connection = new SqlConnection())
+                    {
+                        connection.ConnectionString = DBGateway();
+                        connection.Open();                                                    //open connection
+
+                        SqlCommand insertCmd = new SqlCommand();                             //create command object and pass it the connection and command
+                        insertCmd.Connection = connection;
+                        insertCmd.CommandText = insert_so_query;
+                        insertCmd.Parameters.AddWithValue("USERID", user_id);
+                        var order_id = insertCmd.ExecuteScalar();
+
+                        insertCmd = new SqlCommand();                             //create command object and pass it the connection and command
+                        insertCmd.Connection = connection;
+                        insertCmd.CommandText = insert_soi_query;
+                        insertCmd.Parameters.AddWithValue("ORDERID", order_id);
+                        insertCmd.Parameters.AddWithValue("ITEMID", product_id);
+                        insertCmd.ExecuteNonQuery();
+                        notifySuccess();// redirect the user to the checkout page which will confirm the order
+                    }
+                }
+            }
+
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Welcome", "<script>alert('Please login to make a purchace');</script>");
+        }
+
+        protected void notifySuccess() {
+            Request.Cookies["product_id"].Value = null;
+            Response.Redirect("~/store/checkout.aspx");
+        }
+
+        protected bool checkUser(int user_id) {
+            using (SqlConnection connection = new SqlConnection())
+            {
+                connection.ConnectionString = DBGateway();
+
+                connection.Open();                                                    //open connection
+                String selectStmnt = "SELECT id FROM users where id=@USERID";             //create select statement
+                SqlCommand selectCmnd = new SqlCommand();                             //create command object and pass it the connection and command
+                selectCmnd.Connection = connection;
+                selectCmnd.CommandText = selectStmnt;
+                selectCmnd.Parameters.AddWithValue("USERID", user_id);
+                SqlDataReader reader = selectCmnd.ExecuteReader();                    //Excute command and get reader object back
+
+                while (reader.Read())//loop over the data and search for valid username and password
+                {
+                    if (Convert.ToInt32(reader["id"].ToString()) == user_id)//if match is found
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        protected string DBGateway()
+        {
+            ConnectionStringSettings mySetting = ConfigurationManager.ConnectionStrings["sergios_store_store_items_connection"];
+            if (mySetting == null || string.IsNullOrEmpty(mySetting.ConnectionString))
+                throw new Exception("Fatal error: missing connecting string in web.config file");
+            return mySetting.ConnectionString;
         }
 
         protected void clearBtn_Click(object sender, EventArgs e)

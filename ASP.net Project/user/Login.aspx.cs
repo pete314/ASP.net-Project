@@ -53,7 +53,7 @@ namespace ASP.net_Project.user
                 if(reader["email"].ToString().Equals(username) && reader["password"].ToString().Equals(password))//if match is found
                 {
                     username = reader["email"].ToString();
-                    user_id = reader["userid"].ToString();
+                    user_id = reader["id"].ToString();
                     password = reader["password"].ToString();//set variables to those values
                     validLogin = true;                       //set boolean to true
                     break;
@@ -65,8 +65,8 @@ namespace ASP.net_Project.user
             if(validLogin == true)//if we found a match
             {
                 Response.Cookies["username"].Value = username.ToString();//Set cookies to new username and password
-                Response.Cookies["password"].Value = password.ToString();
-                Response.Cookies["id"].Value = user_id.ToString();
+                //Response.Cookies["password"].Value = password.ToString();
+                Response.Cookies["userid"].Value = user_id.ToString();
                 Response.Redirect("~/Index.aspx");
             }
             else//otherwise output a error message
