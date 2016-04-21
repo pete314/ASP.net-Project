@@ -19,7 +19,6 @@ namespace ASP.net_Project.store
                 if (Request.Cookies["product_id"] != null)
                 {
                     string product_id = Request.Cookies["product_id"].Value.ToString();
-
                 }
                 else {
                     buyBtn.Visible = false;
