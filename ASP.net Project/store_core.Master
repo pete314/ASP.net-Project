@@ -20,26 +20,9 @@
         <nav id="nav">
             <ul>
                 <li><a href="/index.aspx">Home</a></li>
-                <li><a href="#">Brands</a>
-                    <ul>
-                        <li><a href="#">Samsung</a></li>
-                        <li><a href="#">Apple</a></li>
-                        <li><a href="#">LG</a></li>
-                    </ul>
+                <li><a href="/store/store_category.aspx?brand=Apple">Apple phones</a>
                 </li>
-                <li><a href="#">Categories</a>
-                    <ul>
-                        <li><a href="#">Phones</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Other</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Operating systems</a>
-                    <ul>
-                        <li><a href="#">Android</a></li>
-                        <li><a href="#">IOS</a></li>
-                        <li><a href="#">Windows</a></li>
-                    </ul>
+                <li><a href="/store/store_category.aspx?brand=Samsung">Samsung phones</a>
                 </li>
                 <li>
                         <a href="/user/Login.aspx" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a>
@@ -50,13 +33,6 @@
         <!-- END HEADER SUB-MENU-->
     </header>
     <!-- END HEADER MENU-->
-    <!-- Breadcrumb start-->
-    <div id="bradcrumb" class="top-offset-breadcrumb" style="color: black; margin-left: 10px; padding-top: 10px; padding-left: 10px;">
-        <a href="/index.aspx"><i class="fa fa-home"></i>Home</a>
-        >>
-        <a href="#">Some Page</a>
-    </div>
-    <!-- breadcrumb end-->
     
     <!-- CONTENT WRAPPER FROM HERE-->
     <div id="content" class="top-offset-content-panel">
@@ -74,63 +50,33 @@
     <!-- FOOTER WRAPPER FROM HERE-->
     <footer id="footer">
         <div class="wrapper footer-menu-block">
+            <div class="width-20 float-left" style="min-width:200px">&nbsp;</div>
             <div class="width-20 float-left">
                 <h2>Members</h2>
                 <ul class="vertical-footer">
                     <li><a href="/user/Login.aspx"><i class="icon fa fa-sign-in"></i><span class="label">Login</span></a></li>
                     <li><a href="/store/current_cart.aspx"><i class="icon fa fa-shopping-basket"></i><span class="label">Cart</span></a></li>
                     <li><a href="/user/order_history.aspx"><i class="icon fa fa-history"></i><span class="label">History</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-gear"></i><span class="label">Settings</span></a></li>
+                    <li><a href="/site_map.aspx"><i class="icon fa fa-gear"></i><span class="label">Sitemap</span></a></li>
                 </ul>
             </div>
             <div class="width-20 float-left">
                 <h2>Operating systems</h2>
                 <ul class="vertical-footer">
-                    <li><a href="#"><i class="icon fa fa-android"></i><span class="label">Android</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-windows"></i><span class="label">Windows</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-apple"></i><span class="label">Apple</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-info"></i><span class="label">Other</span></a></li>
+                    <li><a href="/store/store_category.aspx?brand=Samsung"><i class="icon fa fa-android"></i><span class="label">Samsung</span></a></li>
+                    <li><a href="/store/store_category.aspx?brand=Apple"><i class="icon fa fa-windows"></i><span class="label">Apple</span></a></li>
+                    <li><a href="/store/store_category.aspx?brand=Windows"><i class="icon fa fa-apple"></i><span class="label">Windows</span></a></li>
+                    <li><a href="/store/store_category.aspx?brand=Other"><i class="icon fa fa-info"></i><span class="label">Other</span></a></li>
                 </ul>
             </div>
-            <div class="width-20 float-left">
-                <h2>Brands</h2>
-                <ul class="vertical-footer">
-                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Samsung</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Nexus</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">Apple</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-mobile"></i><span class="label">LG</span></a></li>
-                </ul>
-            </div>
-            <div class="float-left">
-                <h2>Contact Us</h2>
-                <form method="post" action="#">
-                        <input type="text" name="name" id="name" value="" placeholder="Name" />
-                        <input type="email" name="email" id="email" value="" placeholder="Email" />
-                        <div class="select-wrapper">
-                            <select name="category" id="category">
-                                <option value="">- Category -</option>
-                                <option value="1">Manufacturing</option>
-                                <option value="1">Shipping</option>
-                                <option value="1">Administration</option>
-                                <option value="1">Human Resources</option>
-                            </select>
-                        </div>
-                        <div class="">
-                            <textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
-                        </div>
-                        <div class="">
-                            <ul class="actions">
-                                <li><input type="submit" value="Send Message" class="special" /></li>
-                            </ul>
-                        </div>
-                </form>
-            </div>
-        </div>
+            <div class="width-20 float-left" style="min-height:300px">&nbsp;</div>
+         </div>   
         <!-- FOOTER COPYRIGHT FROM HERE-->
-        <ul class="copyright">
+        <ul class="copyright width-80">
             <li>&copy; Team Sergio. All rights reserved.</li>
         </ul>
         <!-- END FOOTER COPYRIGHT-->
+
     </footer>
     <!-- END FOOTER WRAPPER-->
     <!-- SCRIPTS FROM HERE-->

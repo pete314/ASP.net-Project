@@ -67,6 +67,7 @@
     <Content Include="assets\style\password_reset.css" />
     <Content Include="assets\style\store_items.css" />
     <Content Include="Global.asax" />
+    <Content Include="site_map.aspx" />
     <Content Include="store\checkout.aspx" />
     <Content Include="store\current_cart.aspx" />
     <Content Include="store\store_category.aspx" />
@@ -94,6 +95,13 @@
     <Compile Include="App_Code\StoreItems.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="site_map.aspx.cs">
+      <DependentUpon>site_map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="site_map.aspx.designer.cs">
+      <DependentUpon>site_map.aspx</DependentUpon>
     </Compile>
     <Compile Include="store\checkout.aspx.cs">
       <DependentUpon>checkout.aspx</DependentUpon>
@@ -203,6 +211,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\style\font-awesome.min.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

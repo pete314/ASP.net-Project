@@ -10,7 +10,7 @@
 namespace ASP.net_Project {
     
     
-    public partial class store_items {
+    public partial class site_map {
         
         /// <summary>
         /// SiteMapPath1 control.
@@ -22,21 +22,30 @@ namespace ASP.net_Project {
         protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
         
         /// <summary>
-        /// GridView1 control.
+        /// labelError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label labelError;
         
         /// <summary>
-        /// sqlDSSstore_items control.
+        /// Menu1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlDSSstore_items;
+        protected global::System.Web.UI.WebControls.Menu Menu1;
+        
+        /// <summary>
+        /// SiteMapDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
     }
 }

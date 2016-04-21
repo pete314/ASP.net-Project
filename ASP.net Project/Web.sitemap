@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/index.aspx" title="Home"  description="Sergio's home" >
+        <siteMapNode title="Store"  description="Sergio's home - store pages" >
+          <siteMapNode url="~/store/checkout.aspx" title="Checkout"  description="Sergio's - checkout" />
+          <siteMapNode url="~/store/current_cart.aspx" title="Current cart"  description="Sergio's - current cart" />
+          <siteMapNode url="~/store/store_category.aspx" title="Store category"  description="Sergio's - store category" />
+          <siteMapNode url="~/store/store_items.aspx" title="Store items"  description="Sergio's - store items" />
+          <siteMapNode url="~/store/store_orders.aspx" title="Store orders admin"  description="Sergio's - store orders" />
+        </siteMapNode>
+        <siteMapNode title="Users"  description="Sergio's home - user pages" >
+          <siteMapNode url="~/user/Login.aspx" title="User login"  description="Sergio's - user login" />
+          <siteMapNode url="~/user/forgotten_password.aspx" title="Forgotten password"  description="Sergio's - forgotten password" />
+          <siteMapNode url="~/user/Register.aspx" title="Register"  description="Sergio's - register" />
+          <siteMapNode url="~/user/set_password.aspx" title="Set new password"  description="Sergio's - set new password" />
+          <siteMapNode url="~/user/user_list.aspx" title="User list"  description="Sergio's - user list" />
+          <siteMapNode url="~/user/order_history.aspx" title="Order history"  description="Sergio's - order history" />
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

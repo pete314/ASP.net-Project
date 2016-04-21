@@ -5,7 +5,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form runat="server">
-    
+    <!-- Breadcrumb start-->
+        <div id="bradcrumb" class="top-offset-breadcrumb" style="color: black; margin-left: 10px; padding-top: 10px; padding-left: 10px;">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+        </div>
+        <!-- breadcrumb end-->
     <h2 class="center-all">Current store items</h2>
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" DataSourceID="sqlDSSstore_items" AutoGenerateColumns="False" DataKeyNames="id" ViewStateMode="Enabled">
         <Columns>

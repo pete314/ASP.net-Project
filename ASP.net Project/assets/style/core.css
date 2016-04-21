@@ -1356,6 +1356,9 @@ Author: Peter Nagy
 .width-20{
     width: 20%;
 }
+.width-20:after {
+ clear: both;
+}
 .width-80{
     width: 80%;
 }
@@ -1374,3 +1377,5 @@ Author: Peter Nagy
 .top-offset-content-panel{
     margin-top: 0.5em;
 }
+
+

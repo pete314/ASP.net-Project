@@ -28,7 +28,13 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <form runat="server" id="masterForm"> 
+    <form runat="server" id="masterForm">
+        <!-- Breadcrumb start-->
+        <div id="bradcrumb" class="top-offset-breadcrumb" style="color: black; margin-left: 10px; padding-top: 10px; padding-left: 10px;">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+        </div>
+        <!-- breadcrumb end-->
+        
         <center>
             <h2 class="center-all">Welcome to Sergio's store</h2>
             <h1 id="productHeader" align="left">Our Products</h1>

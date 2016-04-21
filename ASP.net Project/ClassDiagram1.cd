@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ASP.net_Project.App_Code.StoreItemImgEntity">
+    <Position X="9.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAQQAAAEAgAAAgAAAAIAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>App_Code\StoreItemImagesEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.App_Code.StoreItemImages">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAIAgAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\StoreItemImagesModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.App_Code.StoreItems">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\StoreItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.Global">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAEAAAAAAAAAAECIBQAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.index">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAACIQACA=</HashCode>
+      <FileName>index.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.site_map">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAACAAQAAAAAAAIQAAA=</HashCode>
+      <FileName>site_map.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.store_items">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAIQAAA=</HashCode>
+      <FileName>store\store_items.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.store_core">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>store_core.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.forgotten_password">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAABAIgAAAAAAgAQAgAgAABAAAgAAAAAAAQBIQACA=</HashCode>
+      <FileName>user\forgotten_password.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.store.checkout">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAABAAAAAAAEAAAAAAAAAAAAAAAAAAAAAIQAQA=</HashCode>
+      <FileName>store\checkout.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.store.current_cart">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAABAAAIAACgAAAABAACAAQAAAIAAAAAAKQAAA=</HashCode>
+      <FileName>store\current_cart.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.store.store_category">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAACIQAAA=</HashCode>
+      <FileName>store\store_category.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.store.store_item_images">
+    <Position X="11.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAIgBAAAAAAACAIQAAAABAAAAIAAABAAAAIQAAA=</HashCode>
+      <FileName>store\store_item_images.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.store.store_orders">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIQAAA=</HashCode>
+      <FileName>store\store_orders.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.user.Login">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQCAQAAAABAAAAAIAAAAAAQAAAAAEEABAAAAKQACw=</HashCode>
+      <FileName>user\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.user.order_history">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAQA=</HashCode>
+      <FileName>user\order_history.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.user.Register">
+    <Position X="11.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACAAAACABAAAAyAAgAAgAAgAAAKIAQBAAEAKQECQ=</HashCode>
+      <FileName>user\Register.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.user.set_password">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACDAIBQAAAAAQEAAAgAAAAAAAAAgAAAAAAAMQAgA=</HashCode>
+      <FileName>user\set_password.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASP.net_Project.user.user_list">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIAAAAAIQgAA=</HashCode>
+      <FileName>user\user_list.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
