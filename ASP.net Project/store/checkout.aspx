@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="ASP.net_Project.store.checkout" %>
+﻿<%@ Page Title="Sergio's - store checkout" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="checkout.aspx.cs" Inherits="ASP.net_Project.store.checkout" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form runat="server">
         <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="orderHistoryDataSource" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="orderHistoryDataSource" CellPadding="4" ForeColor="#333333" GridLines="None"  Height="100%" Width="100%">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:BoundField DataField="order_id" HeaderText="Order Id" SortExpression="order_id" />

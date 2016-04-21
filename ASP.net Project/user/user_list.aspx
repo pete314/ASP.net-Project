@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="user_list.aspx.cs" Inherits="ASP.net_Project.user.user_list" %>
+﻿<%@ Page Title="Sergio's - user list ADMIN" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="user_list.aspx.cs" Inherits="ASP.net_Project.user.user_list" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -6,7 +6,7 @@
         <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
         
         <br />
-        <asp:ListView ID="userList" runat="server" DataKeyNames="id" DataSourceID="ulDataSource">
+        <asp:ListView ID="userList" runat="server" DataKeyNames="id" DataSourceID="ulDataSource" Height="100%" Width="100%">
             <AlternatingItemTemplate>
                 <tr style="background-color: #FFFFFF;color: #284775;">
                     <td>

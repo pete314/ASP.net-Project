@@ -72,6 +72,7 @@
     <Content Include="store\store_category.aspx" />
     <Content Include="store\store_items.aspx" />
     <Content Include="store\store_item_images.aspx" />
+    <Content Include="store\store_orders.aspx" />
     <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
     <Content Include="user\Login.aspx" />
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="store\store_item_images.aspx.designer.cs">
       <DependentUpon>store_item_images.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store\store_orders.aspx.cs">
+      <DependentUpon>store_orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\store_orders.aspx.designer.cs">
+      <DependentUpon>store_orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\forgotten_password.aspx.cs">
       <DependentUpon>forgotten_password.aspx</DependentUpon>

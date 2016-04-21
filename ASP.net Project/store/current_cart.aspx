@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form runat="server">
+        <center>
         <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
         <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource1" Width="461px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" GridLines="Both">
             <EditItemTemplate>
@@ -74,6 +75,6 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
-
+            </center>
     </form>
 </asp:Content>

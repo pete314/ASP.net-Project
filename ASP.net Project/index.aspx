@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ASP.net_Project.index" %>
+﻿<%@ Page Title="Sergio's store - home" Language="C#" MasterPageFile="~/store_core.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ASP.net_Project.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Index page</title>
 
@@ -35,7 +35,7 @@
         </center>
 
         <div>
-            <asp:GridView ID="gvwProducts" runat="server" Width="860px" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="dsStoreItems" PageSize="4" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" DataKeyNames="id" OnSelectedIndexChanged="gvwProducts_SelectedIndexChanged">
+            <asp:GridView ID="gvwProducts" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="dsStoreItems" Height="100%" Width="100%" PageSize="4" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" DataKeyNames="id" OnSelectedIndexChanged="gvwProducts_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="Product Id" InsertVisible="False" ReadOnly="True" SortExpression="id">
                         <HeaderStyle ForeColor="White" />
@@ -52,7 +52,7 @@
                     <asp:BoundField DataField="description" HeaderText="Description" SortExpression="description">
                         <HeaderStyle ForeColor="White" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="price" HeaderText="Price" SortExpression="Price">
+                    <asp:BoundField DataField="price" HeaderText="Price" SortExpression="Price"  DataFormatString="{0:c}">
                       <HeaderStyle ForeColor="White" />
                     </asp:BoundField>
                     <asp:CommandField ButtonType="Button" ShowSelectButton="True" SelectText="Select Item">
