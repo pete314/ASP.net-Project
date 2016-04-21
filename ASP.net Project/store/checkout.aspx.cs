@@ -15,12 +15,25 @@ namespace ASP.net_Project.store
             {
                 if (Request.Cookies["order_success"] != null)
                 {
-                    Request.Cookies["order_success"].Value = null;
                     labelError.ForeColor = System.Drawing.Color.Green;
                     labelError.Text = "Thanks for shoping at Sergio's, we received you order!";
                 }
+                else {
+                    Response.Redirect("~/index.aspx");
+                }
+                Page.LoadComplete += new EventHandler(Page_LoadComplete);
+                
             }
         }
-        
+        /// <summary>
+        /// Remove the cookie after page is loaded so the checkout want be visible again
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void Page_LoadComplete(object sender, EventArgs e)
+        {
+            Response.Cookies["order_success"].Expires = DateTime.Now.AddDays(-1d);
+        }
+
     }
 }

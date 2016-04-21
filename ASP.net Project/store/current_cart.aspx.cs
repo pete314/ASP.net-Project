@@ -72,8 +72,9 @@ namespace ASP.net_Project.store
         }
 
         protected void notifySuccess(int order_id) {
-            Request.Cookies["product_id"].Value = null;
-            Request.Cookies["order_success"].Value = order_id.ToString();
+            Response.Cookies["product_id"].Value = null;
+            Response.Cookies["product_id"].Expires = DateTime.Now.AddDays(-1d);
+            Response.Cookies["order_success"].Value = order_id.ToString();
             Response.Redirect("~/store/checkout.aspx");
         }
 
@@ -111,7 +112,7 @@ namespace ASP.net_Project.store
 
         protected void clearBtn_Click(object sender, EventArgs e)
         {
-            Request.Cookies["product_id"].Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies["product_id"].Expires = DateTime.Now.AddDays(-1);
             Response.Redirect("~/index.aspx");
         }
     }

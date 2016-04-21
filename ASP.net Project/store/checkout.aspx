@@ -8,12 +8,12 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="orderHistoryDataSource" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:BoundField DataField="id" HeaderText="Store item id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                <asp:BoundField DataField="order_id" HeaderText="Order Id" SortExpression="order_id" />
                 <asp:BoundField DataField="brand" HeaderText="Brand" SortExpression="brand" />
                 <asp:BoundField DataField="model" HeaderText="Model" SortExpression="model" />
                 <asp:BoundField DataField="release" HeaderText="Release" SortExpression="release" />
-                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" DataFormatString="{0:c}" />
-                <asp:BoundField DataField="order_id" HeaderText="Order id" SortExpression="order_id" />
+                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" />
+                <asp:BoundField DataField="id" HeaderText="Item id" SortExpression="id" InsertVisible="False" ReadOnly="True" />
                 <asp:BoundField DataField="qty" HeaderText="Quantity" SortExpression="qty" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
@@ -28,9 +28,9 @@
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
         <br />
-        <asp:SqlDataSource ID="orderHistoryDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_store_store_items_connection %>" SelectCommand="SELECT store_orders.id, store_orders.created, store_items.brand, store_items.model, store_items.release, store_items.price, store_order_items.order_id, store_order_items.qty FROM store_items INNER JOIN store_orders ON store_items.id = store_orders.id CROSS JOIN store_order_items WHERE (store_orders.user_id = @user_id)">
+        <asp:SqlDataSource ID="orderHistoryDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:sergios_store_store_items_connection %>" SelectCommand="SELECT store_orders.id, store_orders.created, store_items.brand, store_items.model, store_items.release, store_items.price, store_order_items.order_id, store_order_items.qty FROM store_items INNER JOIN store_orders ON store_items.id = store_orders.id CROSS JOIN store_order_items WHERE (store_orders.id = @order_success)">
             <SelectParameters>
-                <asp:CookieParameter CookieName="userid" DefaultValue="1" Name="user_id" Type="Int32" />
+                <asp:CookieParameter CookieName="order_success" Name="order_success" />
             </SelectParameters>
         </asp:SqlDataSource>
     </form>
