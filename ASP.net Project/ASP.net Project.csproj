@@ -69,6 +69,7 @@
     <Content Include="Global.asax" />
     <Content Include="store\checkout.aspx" />
     <Content Include="store\current_cart.aspx" />
+    <Content Include="store\store_category.aspx" />
     <Content Include="store\store_items.aspx" />
     <Content Include="store\store_item_images.aspx" />
     <Content Include="user\forgotten_password.aspx" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="store\current_cart.aspx.designer.cs">
       <DependentUpon>current_cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store\store_category.aspx.cs">
+      <DependentUpon>store_category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store\store_category.aspx.designer.cs">
+      <DependentUpon>store_category.aspx</DependentUpon>
     </Compile>
     <Compile Include="store\store_items.aspx.cs">
       <DependentUpon>store_items.aspx</DependentUpon>
