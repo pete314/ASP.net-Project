@@ -74,6 +74,7 @@
     <Content Include="user\forgotten_password.aspx" />
     <Content Include="index.aspx" />
     <Content Include="user\Login.aspx" />
+    <Content Include="user\order_history.aspx" />
     <Content Include="user\Register.aspx" />
     <Content Include="user\set_password.aspx" />
     <Content Include="Web.config" />
@@ -147,6 +148,13 @@
     </Compile>
     <Compile Include="user\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\order_history.aspx.cs">
+      <DependentUpon>order_history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\order_history.aspx.designer.cs">
+      <DependentUpon>order_history.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

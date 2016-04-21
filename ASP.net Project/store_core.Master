@@ -77,9 +77,9 @@
             <div class="width-20 float-left">
                 <h2>Members</h2>
                 <ul class="vertical-footer">
-                    <li><a href="#"><i class="icon fa fa-sign-in"></i><span class="label">Login</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-shopping-basket"></i><span class="label">Cart</span></a></li>
-                    <li><a href="#"><i class="icon fa fa-history"></i><span class="label">History</span></a></li>
+                    <li><a href="/user/Login.aspx"><i class="icon fa fa-sign-in"></i><span class="label">Login</span></a></li>
+                    <li><a href="/store/current_cart.aspx"><i class="icon fa fa-shopping-basket"></i><span class="label">Cart</span></a></li>
+                    <li><a href="/user/order_history.aspx"><i class="icon fa fa-history"></i><span class="label">History</span></a></li>
                     <li><a href="#"><i class="icon fa fa-gear"></i><span class="label">Settings</span></a></li>
                 </ul>
             </div>
