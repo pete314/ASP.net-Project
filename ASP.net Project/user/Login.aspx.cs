@@ -32,6 +32,7 @@ namespace ASP.net_Project.user
         {
             String username = txtUsername.Text; //Get username and password from input controls
             String password = txtPassword.Text;
+            String user_id = "";
             bool validLogin = false;
 
             //Establish a connection object using the connection string to the database
@@ -41,7 +42,7 @@ namespace ASP.net_Project.user
             connection.ConnectionString = DBGateway();
             
             connection.Open();                                                    //open connection
-            String selectStmnt = "SELECT email, password FROM users";             //create select statement
+            String selectStmnt = "SELECT id, email, password FROM users";             //create select statement
             SqlCommand selectCmnd = new SqlCommand();                             //create command object and pass it the connection and command
             selectCmnd.Connection = connection;
             selectCmnd.CommandText = selectStmnt;
@@ -52,6 +53,7 @@ namespace ASP.net_Project.user
                 if(reader["email"].ToString().Equals(username) && reader["password"].ToString().Equals(password))//if match is found
                 {
                     username = reader["email"].ToString();
+                    user_id = reader["userid"].ToString();
                     password = reader["password"].ToString();//set variables to those values
                     validLogin = true;                       //set boolean to true
                     break;
@@ -64,6 +66,7 @@ namespace ASP.net_Project.user
             {
                 Response.Cookies["username"].Value = username.ToString();//Set cookies to new username and password
                 Response.Cookies["password"].Value = password.ToString();
+                Response.Cookies["id"].Value = user_id.ToString();
                 Response.Redirect("~/Index.aspx");
             }
             else//otherwise output a error message

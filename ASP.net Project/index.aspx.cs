@@ -32,6 +32,8 @@ namespace ASP.net_Project
             //Can add the product id to a cookie or session state variable here
             //Then redirect to Cians page. Cian should then use his page load event to retrieve this cookie and use the 
             //product id it holds to get product data from the database.
+            Response.Cookies["product_id"].Value = productID;
+            Response.Redirect("~/store/current_cart.aspx");
         }
     }
 }
