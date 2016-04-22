@@ -11,7 +11,7 @@
         <asp:Label ID="labelError" runat="server" Text=""></asp:Label>
         
         <br />
-        <asp:ListView ID="userList" runat="server" DataKeyNames="id" DataSourceID="ulDataSource" Height="100%" Width="100%">
+        <asp:ListView ID="userList" runat="server" DataKeyNames="id" DataSourceID="ulDataSource">
             <AlternatingItemTemplate>
                 <tr style="background-color: #FFFFFF;color: #284775;">
                     <td>

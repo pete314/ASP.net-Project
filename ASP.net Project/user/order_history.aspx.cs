@@ -15,7 +15,7 @@ namespace ASP.net_Project.user
             {
                 if (Request.Cookies["order_success"] != null)
                 {
-                    Request.Cookies["order_success"].Value = null;
+                    Response.Cookies["order_success"].Expires = DateTime.Now.AddDays(-1d);
                     labelError.ForeColor = System.Drawing.Color.Green;
                     labelError.Text = "Thanks for shoping at Sergio's, we received you order!";
                 }
