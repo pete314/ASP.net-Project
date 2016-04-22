@@ -10,6 +10,7 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -25,7 +26,7 @@
                 <li><a href="/store/store_category.aspx?brand=Samsung">Samsung phones</a>
                 </li>
                 <li>
-                        <a href="/user/Login.aspx" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a>
+                    <div id="loginbtn"><a href="/user/Login.aspx" class="button special"><i class="fa fa-sign-in fa-lg"></i>Login</a></div>
                 </li>
             </ul>
         </nav>
@@ -80,6 +81,14 @@
     </footer>
     <!-- END FOOTER WRAPPER-->
     <!-- SCRIPTS FROM HERE-->
+    <script>
+        if (document.cookie.indexOf("userid") >= 0) {
+            // User is logged in
+            document.getElementById('loginbtn').innerHTML = "<a href=\"/user/logout.aspx\" class=\"button special\"><i class=\"fa fa-sign-in fa-lg\"></i>Logout</a>"
+        } else {
+            document.getElementById('loginbtn').innerHTML = "<a href=\"/user/Login.aspx\" class=\"button special\"><i class=\"fa fa-sign-in fa-lg\"></i>Login</a>"
+        }
+    </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </body>
 </html>
